@@ -14,12 +14,16 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" side="left" behavior="mobile" bordered style="display: flex; flex-direction: column; gap: 10px; padding: 5px;">
-      <q-btn class="glossy" rounded color="deep-orange" label="home" to="/" />
-      <q-btn class="glossy" rounded color="deep-orange" label="habitaciones" to="/habitaciones" />
-      <q-btn class="glossy" rounded color="deep-orange" label="deportes" to="/deportes" />
-      <q-btn class="glossy" rounded color="deep-orange" label="gastronomia" to="/gastronomia" />
-      <q-btn class="glossy" rounded color="deep-orange" label="servicios" to="/servicios" />
+    <q-drawer v-model="leftDrawerOpen" side="left" behavior="mobile" bordered>
+      <div>
+        <div class="drawer">
+          <q-btn class="glossy" rounded color="deep-orange" label="home" to="/" />
+          <q-btn class="glossy" rounded color="deep-orange" label="habitaciones" to="/habitaciones" />
+          <q-btn class="glossy" rounded color="deep-orange" label="deportes" to="/deportes" />
+          <q-btn class="glossy" rounded color="deep-orange" label="gastronomia" to="/gastronomia" />
+          <q-btn class="glossy" rounded color="deep-orange" label="servicios" to="/servicios" />
+        </div>
+      </div>
     </q-drawer>
 
     <q-page-container>
@@ -50,4 +54,10 @@ function toggleLeftDrawer() {
 
 </script>
 <style scoped>
+.drawer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+}
 </style>
