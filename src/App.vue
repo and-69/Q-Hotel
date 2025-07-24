@@ -2,22 +2,24 @@
   <q-layout view="hHh lpR fFf">
 
     <q-header elevated class="bg-primary text-white">
-      <q-toolbar>
-        <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
+      <div class="header">
+        <q-toolbar class="tm">
+          <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
 
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
-          </q-avatar>
-          Title
-        </q-toolbar-title>
-      </q-toolbar>
+          <q-toolbar-title>
+            <q-avatar>
+              <img src="/public/img/tortuga (2).png">
+            </q-avatar>
+            Title
+          </q-toolbar-title>
+        </q-toolbar>
+      </div>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" side="left" behavior="mobile" bordered>
+    <q-drawer v-model="leftDrawerOpen" side="left" behavior="mobile" bordered style="background-color: rgba(114, 171, 233, 0.5); ">
       <div>
         <div class="drawer">
-          <q-btn class="glossy" rounded color="deep-orange" label="home" to="/" />
+          <q-btn class="glossy" rounded color="deep-purple-4" label="home" to="/" />
           <q-btn class="glossy" rounded color="deep-orange" label="habitaciones" to="/habitaciones" />
           <q-btn class="glossy" rounded color="deep-orange" label="deportes" to="/deportes" />
           <q-btn class="glossy" rounded color="deep-orange" label="gastronomia" to="/gastronomia" />
@@ -27,20 +29,26 @@
     </q-drawer>
 
     <q-page-container>
+
       <router-view />
     </q-page-container>
 
     <q-footer elevated class="bg-grey-8 text-white">
-      <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
-          </q-avatar>
-        </q-toolbar-title>
-      </q-toolbar>
+      <div class="footer">
+        <q-toolbar>
+          <q-toolbar-title>
+          </q-toolbar-title>
+          <div class="q-ml-auto">
+            <q-avatar>
+              <img src="/public/img/tortuga (2).png">
+            </q-avatar>
+          </div>
+        </q-toolbar>
+      </div>
     </q-footer>
 
   </q-layout>
+  <!-- https://colorhunt.co/palette/3674b5578fcaf5f0cdfada7a -->
 </template>
 
 <script setup>
@@ -59,5 +67,15 @@ function toggleLeftDrawer() {
   flex-direction: column;
   gap: 10px;
   padding: 5px;
+}
+.footer{
+  background-color: #3674B5;
+}
+.header {
+  background-color: #3674B5;
+}
+
+.tm {
+  height: 80px;
 }
 </style>
