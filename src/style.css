@@ -3,3 +3,54 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body, #q-app,
+button,
+.q-btn,
+.q-btn__content,
+button:hover,
+.q-btn:hover,
+.q-btn__content:hover,
+button:active,
+.q-btn:active,
+.q-btn__content:active {
+  cursor: url('/img/tentaculos.png'), auto;
+}
+
+.button-33 {
+  background-color: #ffe066 !important; /* Amarillo suave */
+  border-radius: 100px;
+  box-shadow: 
+    #ffd23f 0 -25px 18px -14px inset, /* Amarillo intenso */
+    #ffb627 0 1px 2px,
+    #ffb627 0 2px 4px,
+    #ffa46c 0 4px 8px,
+    #ff9f63 0 8px 16px,
+    #ffa51f 0 16px 32px; /* Naranja fuerte */
+  color: #450086 !important; /* Naranja oscuro para el texto */
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-33:hover {
+  box-shadow: 
+    #ffd23f 0 -25px 18px -14px inset,
+    #ffb627 0 1px 2px,
+    #ffb627 0 2px 4px,
+    #ffa66f 0 4px 8px,
+    #ffac78 0 8px 16px,
+    #ff9913 0 16px 32px;
+  background-color: #a677ff !important; /* Más brillante al pasar el mouse */
+  color: #450086;
+  transform: scale(1.05) rotate(-1deg);
+}

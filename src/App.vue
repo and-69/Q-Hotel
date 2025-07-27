@@ -16,14 +16,18 @@
       </div>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" side="left" behavior="mobile" bordered style="background-color: rgba(114, 171, 233, 0.5); ">
+    <q-drawer v-model="leftDrawerOpen" side="left" behavior="mobile" bordered style="background-color: #ffefaa ">
       <div>
         <div class="drawer">
-          <q-btn class="glossy" rounded color="deep-purple-4" label="home" to="/" />
-          <q-btn class="glossy" rounded color="deep-orange" label="habitaciones" to="/habitaciones" />
-          <q-btn class="glossy" rounded color="deep-orange" label="deportes" to="/deportes" />
-          <q-btn class="glossy" rounded color="deep-orange" label="gastronomia" to="/gastronomia" />
-          <q-btn class="glossy" rounded color="deep-orange" label="servicios" to="/servicios" />
+          <div class="bonyur1">
+          <q-btn class="button-33" label="home" to="/" />
+          </div>
+          <div class="bonyur">
+            <q-btn class="button-33" label="habitaciones" to="/habitaciones" />
+            <q-btn class="button-33" label="deportes" to="/deportes" />
+            <q-btn class="button-33" label="gastronomia" to="/gastronomia" />
+            <q-btn class="button-33" label="servicios" to="/servicios" />
+          </div>
         </div>
       </div>
     </q-drawer>
@@ -62,20 +66,55 @@ function toggleLeftDrawer() {
 
 </script>
 <style scoped>
+@font-face {
+  font-family: 'Super Impacto';
+  src: url('/fonts/SuperImpacto.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.bonyur, .bonyur1 {
+  display: flex;
+  flex-direction: column; 
+  gap: 30px;
+  margin-top: 20px;
+}
+
+
 .drawer {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 5px;
+  gap: 200px;
+  padding: 15px;
 }
-.footer{
-  background-color: #3674B5;
+
+.footer, .header {
+  background-color: #ffe59d;
+  font-family: 'Super Impacto', Impact, sans-serif;
+  color: #450086 !important;
 }
-.header {
-  background-color: #3674B5;
-}
+
+
 
 .tm {
   height: 80px;
+  font-family: 'Super Impacto', Impact, sans-serif;
+}
+
+.button-33 {
+  background-color: #3674B5;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Super Impacto', Impact, sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.button-33:hover {
+  background-color: #285a8c;
 }
 </style>
