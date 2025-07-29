@@ -10,7 +10,7 @@
             <q-avatar>
               <img src="/public/img/tortuga (2).png">
             </q-avatar>
-            Title
+            TURTLE ISLAND HOTEL
           </q-toolbar-title>
         </q-toolbar>
       </div>

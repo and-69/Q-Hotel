@@ -6,6 +6,7 @@
 
 body, #q-app,
 button,
+.button-33,
 .q-btn,
 .q-btn__content,
 button:hover,
@@ -14,20 +15,20 @@ button:hover,
 button:active,
 .q-btn:active,
 .q-btn__content:active {
-  cursor: url('/img/tentaculos.png'), auto;
+  cursor: url('/img/tentaculos.png'), pointer !important;
 }
 
 .button-33 {
-  background-color: #ffe066 !important; /* Amarillo suave */
+  background-color: #ffe066 !important; 
   border-radius: 100px;
   box-shadow: 
-    #ffd23f 0 -25px 18px -14px inset, /* Amarillo intenso */
+    #ffd23f 0 -25px 18px -14px inset, 
     #ffb627 0 1px 2px,
     #ffb627 0 2px 4px,
     #ffa46c 0 4px 8px,
     #ff9f63 0 8px 16px,
-    #ffa51f 0 16px 32px; /* Naranja fuerte */
-  color: #450086 !important; /* Naranja oscuro para el texto */
+    #ffa51f 0 16px 32px; 
+  color: #450086 !important; 
   cursor: pointer;
   display: inline-block;
   font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
