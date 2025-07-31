@@ -12,12 +12,13 @@
         <div class="centrar">
             <div class="textos">Diseñado para quienes aman el mar tanto como nosotros.</div>
         </div>
-        
-        <div class="pngs">
+        <div class="row items-center justify-center">
+        <div class="pngs col-12 col-md-6 col-lg-12">
             <img src="/public/img/pngegg.png" alt="">
             <img src="/public/img/pngegg (1).png" alt="">
             <img src="/public/img/playita.png" alt="">
             <img src="/public/img/pngegg (2).png" alt="">
+        </div>
         </div>
         <div class="centrar">
             <div class="textos">Diversión, relax y sabor: jetski al amanecer, spa al atardecer y cena bajo las estrellas.</div>
@@ -138,7 +139,7 @@ body,
 
 .pngs {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 40px;
