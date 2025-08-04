@@ -20,61 +20,61 @@
                     </q-img>
 
                     <q-card-actions>
-                        <q-btn class="button-34" flat @click="modal1 = true">Visitar Sitio</q-btn>
+                        <q-btn class="button-34" flat @click="modal1 = true">Consultar informacion</q-btn>
                     </q-card-actions>
                 </q-card>
                 <q-card class="my-card">
                     <q-img src="/public/img/badminton.jpg" class="img-card">
                         <div class="absolute-bottom">
-                            <div class="text-h6">COMIDA ITALIANA</div>
+                            <div class="text-h6">BADMINTON</div>
                         </div>
                     </q-img>
 
                     <q-card-actions>
-                        <q-btn class="button-34" flat @click="modal2 = true">Visitar Sitio</q-btn>
+                        <q-btn class="button-34" flat @click="modal2 = true">Consultar informacion</q-btn>
                     </q-card-actions>
                 </q-card>
                 <q-card class="my-card">
                     <q-img src="/public/img/squash.jpg" class="img-card">
                         <div class="absolute-bottom">
-                            <div class="text-h6">COMIDA ASIATICA</div>
+                            <div class="text-h6">SQUASH</div>
                         </div>
                     </q-img>
 
                     <q-card-actions>
-                        <q-btn class="button-34" flat @click="modal3 = true">Visitar Sitio</q-btn>
+                        <q-btn class="button-34" flat @click="modal3 = true">Consultar informacion</q-btn>
                     </q-card-actions>
                 </q-card>
                 <q-card class="my-card">
                     <q-img src="/public/img/paddleboard.jpg" class="img-card">
                         <div class="absolute-bottom">
-                            <div class="text-h6">BARES Y BEBIDAS</div>
+                            <div class="text-h6">PADDLEBOARD</div>
                         </div>
                     </q-img>
 
                     <q-card-actions>
-                        <q-btn class="button-34" flat @click="modal4 = true">Visitar Sitio</q-btn>
+                        <q-btn class="button-34" flat @click="modal4 = true">Consultar informacion</q-btn>
                     </q-card-actions>
                 </q-card>
                 <q-card class="my-card">
                     <q-img src="/public/img/tennis.jpg" class="img-card">
                         <div class="absolute-bottom">
-                            <div class="text-h6">COMIDA VEGETARIANA Y VEGANA</div>
+                            <div class="text-h6">TENNIS</div>
                         </div>
                     </q-img>
 
                     <q-card-actions>
-                        <q-btn class="button-34" flat @click="modal5 = true">Visitar Sitio</q-btn>
+                        <q-btn class="button-34" flat @click="modal5 = true">Consultar informacion</q-btn>
                     </q-card-actions>
                 </q-card><q-card class="my-card">
                     <q-img src="/public/img/pinpon.jpg" class="img-card">
                         <div class="absolute-bottom">
-                            <div class="text-h6">COMIDA TRADICIONAL</div>
+                            <div class="text-h6">PINPON</div>
                         </div>
                     </q-img>
 
                     <q-card-actions>
-                        <q-btn class="button-34" flat @click="modal6 = true">Visitar Sitio</q-btn>
+                        <q-btn class="button-34" flat @click="modal6 = true">Consultar informacion</q-btn>
                     </q-card-actions>
                 </q-card>
             </div>
@@ -84,56 +84,46 @@
             <q-dialog v-model="modal1">
                 <q-card style="width: 700px; max-width: 80vw;">
                     <q-card-section>
-                        <div class="text-h6">MENU COMIDAS RAPIDAS</div>
+                        <h3 style="color: #3498db; margin: 5px 0;">🚤 Jetski (Moto Acuática)</h3>
                     </q-card-section>
 
                     <q-card-section class="q-pt-none">
                         <div style="font-family: Arial, sans-serif; max-width: 100%;">
                             <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🥪 Bocados & Snacks</h3>
+
+                                <p style="margin: 5px 0; text-align: justify;">
+                                    Disfruta de la emoción y adrenalina del jetski en aguas abiertas.
+                                    Nuestras motos acuáticas son fáciles de manejar, ideales para principiantes
+                                    y expertos. Incluye breve inducción de seguridad y chaleco salvavidas.
+                                </p>
+                            </div>
+
+                            <div style="margin-bottom: 15px;">
+                                <h3 style="color: #3498db; margin: 5px 0;">⏰ Horarios Disponibles</h3>
                                 <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Ceviche express</strong> - Trozos de pescado fresco marinado en limón,
-                                        con ají, cebolla y tostadas</li>
-                                    <li><strong>Tacos de camarón</strong> - Tortillas suaves con camarones salteados,
-                                        pico de gallo y guacamole</li>
-                                    <li><strong>Ensalada César con pollo grillé</strong> - Crujiente lechuga romana,
-                                        croutons, parmesano y aderezo cremoso</li>
-                                    <li><strong>Pinchos de fruta tropical</strong> - Piña, mango, sandía y kiwi
-                                        (opcional con chilito y limón)</li>
+                                    <li><strong>Lunes a Domingo:</strong></li>
+                                    <ul style="padding-left: 20px; margin: 5px 0;">
+                                        <li><strong>Mañana:</strong> 9:00 AM – 10:30 AM | 11:00 AM – 12:30 PM</li>
+                                        <li><strong>Tarde:</strong> 2:00 PM – 3:30 PM | 4:00 PM – 5:30 PM</li>
+                                    </ul>
                                 </ul>
                             </div>
 
                             <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🍔 Hamburguesas & Sándwiches</h3>
+                                <h3 style="color: #3498db; margin: 5px 0;">💰 Precios</h3>
                                 <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Burger "Paraíso"</strong> - Carne 100% res, queso cheddar, aguacate y
-                                        salsa chipotle</li>
-                                    <li><strong>Sándwich club</strong> - Pan tostado con pollo, tocino, lechuga, tomate
-                                        y mayonesa</li>
-                                    <li><strong>Wrap vegano</strong> - Hummus, espinaca, aguacate, zanahoria y
-                                        germinados</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🌮 Especialidades Playeras</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Fish & Chips</strong> - Filete de pescado empanizado con papas fritas
-                                        crujientes</li>
-                                    <li><strong>Tostadas de aguachile</strong> - Camarones en salsa picante de pepino y
-                                        limón</li>
-                                    <li><strong>Quesadillas de mariscos</strong> - Tortilla de harina rellena de queso y
-                                        mix de mariscos</li>
+                                    <li><strong>30 minutos:</strong> $50 USD por persona</li>
+                                    <li><strong>1 hora:</strong> $90 USD por persona</li>
+                                    <li><strong>Pack grupal (2 personas, 1 hora):</strong> $150 USD</li>
                                 </ul>
                             </div>
 
                             <div>
-                                <h3 style="color: #e67e22; margin: 5px 0;">🥤 Bebidas Refrescantes</h3>
+                                <h3 style="color: #3498db; margin: 5px 0;">📌 Requisitos</h3>
                                 <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Limonada de coco</strong> - Fresca y cremosa</li>
-                                    <li><strong>Jugo verde detox</strong> - Pepino, piña, espinaca y jengibre</li>
-                                    <li><strong>Michelada clásica</strong> - Cerveza, limón, salsa inglesa y chile en
-                                        polvo</li>
+                                    <li>Edad mínima: 16 años (menores con autorización)</li>
+                                    <li>Uso obligatorio de chaleco salvavidas</li>
+                                    <li>No se permite el consumo de alcohol antes de la actividad</li>
                                 </ul>
                             </div>
                         </div>
@@ -148,39 +138,55 @@
             <q-dialog v-model="modal2">
                 <q-card style="width: 700px; max-width: 80vw;">
                     <q-card-section>
-                        <div class="text-h6">MENU COMIDA ITALIANA</div>
+                        <h3 style="color: #e74c3c; margin: 5px 0;">🏸 Badminton</h3>
                     </q-card-section>
 
                     <q-card-section class="q-pt-none">
                         <div style="font-family: Arial, sans-serif; max-width: 100%;">
                             <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🍝 Antipasti & Primi</h3>
+
+                                <p style="margin: 5px 0; text-align: justify;">
+                                    Diviértete con este deporte rápido y dinámico, perfecto para jugar en parejas o
+                                    individual.
+                                    El badminton mejora la coordinación, resistencia y reflejos. Incluye raquetas
+                                    profesionales,
+                                    volantes (plumillas) y red. ¡Ideal para todas las edades!
+                                </p>
+                            </div>
+
+                            <div style="margin-bottom: 15px;">
+                                <h3 style="color: #e74c3c; margin: 5px 0;">⏰ Horarios Disponibles</h3>
                                 <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Bruschetta al Pomodoro</strong> - Pan tostado con tomate fresco,
-                                        albahaca y ajo</li>
-                                    <li><strong>Carpaccio di Manzo</strong> - Finas láminas de res con rúcula,
-                                        parmesano y aderezo de limón</li>
-                                    <li><strong>Spaghetti Aglio e Olio</strong> - Espaguetis con ajo, aceite de oliva
-                                        y guindilla</li>
+                                    <li><strong>Lunes a Viernes:</strong></li>
+                                    <ul style="padding-left: 20px; margin: 5px 0;">
+                                        <li><strong>Mañana:</strong> 8:00 AM – 10:00 AM | 11:00 AM – 1:00 PM</li>
+                                        <li><strong>Tarde:</strong> 4:00 PM – 6:00 PM | 7:00 PM – 9:00 PM</li>
+                                    </ul>
+                                    <li><strong>Sábado y Domingo:</strong></li>
+                                    <ul style="padding-left: 20px; margin: 5px 0;">
+                                        <li><strong>Mañana:</strong> 9:00 AM – 12:00 PM</li>
+                                        <li><strong>Tarde:</strong> 3:00 PM – 7:00 PM</li>
+                                    </ul>
                                 </ul>
                             </div>
 
                             <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🍕 Pizze</h3>
+                                <h3 style="color: #e74c3c; margin: 5px 0;">💰 Precios</h3>
                                 <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Margherita</strong> - Salsa de tomate, mozzarella fresca y albahaca</li>
-                                    <li><strong>Diavola</strong> - Salsa de tomate, mozzarella, salami picante y
-                                        orégano</li>
-                                    <li><strong>Caprichosa</strong> - Salsa de tomate, mozzarella, jamón, champiñones
-                                        y alcachofas</li>
+                                    <li><strong>1 hora (individual):</strong> $15 USD</li>
+                                    <li><strong>1 hora (parejas):</strong> $25 USD</li>
+                                    <li><strong>Clase con instructor (1 hora):</strong> $30 USD</li>
+                                    <li><strong>Pack familiar (2 adultos + 2 niños, 2 horas):</strong> $50 USD</li>
                                 </ul>
                             </div>
 
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🍷 Vini</h3>
+                            <div>
+                                <h3 style="color: #e74c3c; margin: 5px 0;">📌 Requisitos y Notas</h3>
                                 <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Chianti</strong> - Vino tinto de la Toscana, seco y afrutado</li>
-                                    <li><strong>Prosecco</strong> - Vino espumoso italiano, fresco y floral</li>
+                                    <li>Se recomienda ropa deportiva y calzado cómodo.</li>
+                                    <li>Edad mínima para jugar sin supervisión: 12 años.</li>
+                                    <li>Reserva previa requerida (máximo 4 personas por cancha).</li>
+                                    <li>¡Las raquetas y volantes están incluidos!</li>
                                 </ul>
                             </div>
                         </div>
@@ -195,42 +201,52 @@
             <q-dialog v-model="modal3">
                 <q-card style="width: 700px; max-width: 80vw;">
                     <q-card-section>
-                        <div class="text-h6">MENU COMIDA ASIATICA</div>
+                        <h3 style="color: #9b59b6; margin: 5px 0;">🎾 Squash</h3>
                     </q-card-section>
 
                     <q-card-section class="q-pt-none">
                         <div style="font-family: Arial, sans-serif; max-width: 100%;">
                             <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🍣 Sushi & Sashimi</h3>
+
+                                <p style="margin: 5px 0; text-align: justify;">
+                                    Disfruta del squash, un deporte de alta intensidad que mejora tu condición física,
+                                    reflejos y coordinación. Se juega en una cancha cerrada con raquetas especiales
+                                    y pelotas de alta velocidad. ¡Perfecto para liberar estrés y quemar calorías!
+                                </p>
+                            </div>
+
+                            <div style="margin-bottom: 15px;">
+                                <h3 style="color: #9b59b6; margin: 5px 0;">⏰ Horarios Disponibles</h3>
                                 <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Sushi variado</strong> - Selección de nigiri, maki y sashimi</li>
-                                    <li><strong>Rollos especiales</strong> - Con ingredientes frescos y salsas
-                                        exóticas</li>
+                                    <li><strong>Lunes a Viernes:</strong></li>
+                                    <ul style="padding-left: 20px; margin: 5px 0;">
+                                        <li><strong>Mañana:</strong> 7:00 AM – 10:00 AM</li>
+                                        <li><strong>Tarde:</strong> 4:00 PM – 10:00 PM</li>
+                                    </ul>
+                                    <li><strong>Sábado y Domingo:</strong></li>
+                                    <ul style="padding-left: 20px; margin: 5px 0;">
+                                        <li><strong>Jornada continua:</strong> 8:00 AM – 8:00 PM</li>
+                                    </ul>
                                 </ul>
                             </div>
 
                             <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🍜 Platos Calientes</h3>
+                                <h3 style="color: #9b59b6; margin: 5px 0;">💰 Tarifas</h3>
                                 <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Ramen</strong> - Fideos en caldo con carne, huevo y verduras</li>
-                                    <li><strong>Pad Thai</strong> - Fideos de arroz salteados con camarones,
-                                        pollo y cacahuate</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🥢 Acompañamientos</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Edamame</strong> - Habas de soja al vapor con sal</li>
-                                    <li><strong>Rollitos primavera</strong> - Con salsa agridulce</li>
+                                    <li><strong>Sesión individual (40 min):</strong> $20 USD</li>
+                                    <li><strong>Sesión doble (2 personas, 1 hora):</strong> $35 USD</li>
+                                    <li><strong>Clase con entrenador (1 hora):</strong> $45 USD</li>
+                                    <li><strong>Pack 5 sesiones (individual):</strong> $85 USD (15% de descuento)</li>
                                 </ul>
                             </div>
 
                             <div>
-                                <h3 style="color: #e67e22; margin: 5px 0;">🥤 Bebidas Asiáticas</h3>
+                                <h3 style="color: #9b59b6; margin: 5px 0;">📌 Normativas y Equipamiento</h3>
                                 <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Té verde</strong> - Refrescante y antioxidante</li>
-                                    <li><strong>Ramune</strong> - Refresco japonés con sabor a frutas</li>
+                                    <li>Uso obligatorio de zapatos deportivos de suela no marcante.</li>
+                                    <li>Se proporcionan raquetas y pelotas (o puedes traer las tuyas).</li>
+                                    <li>Recomendado para mayores de 14 años (niños con supervisión).</li>
+                                    <li>Reservas con 24 horas de anticipación.</li>
                                 </ul>
                             </div>
                         </div>
@@ -245,35 +261,51 @@
             <q-dialog v-model="modal4">
                 <q-card style="width: 700px; max-width: 80vw;">
                     <q-card-section>
-                        <div class="text-h6">MENU BARES</div>
+                        <h3 style="color: #1abc9c; margin: 5px 0;">🏄‍♂️ Paddleboard (SUP)</h3>
                     </q-card-section>
 
                     <q-card-section class="q-pt-none">
                         <div style="font-family: Arial, sans-serif; max-width: 100%;">
                             <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🍹 Cocteles</h3>
+
+                                <p style="margin: 5px 0; text-align: justify;">
+                                    Navega con estilo sobre las aguas con nuestro paddleboard (Stand Up Paddle).
+                                    Una actividad relajante que combina ejercicio, equilibrio y conexión con la
+                                    naturaleza.
+                                    Ideal para disfrutar del atardecer o explorar la costa. ¡Perfecto para todas las
+                                    edades!
+                                </p>
+                            </div>
+
+                            <div style="margin-bottom: 15px;">
+                                <h3 style="color: #1abc9c; margin: 5px 0;">⏰ Horarios Disponibles</h3>
                                 <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Mojito</strong> - Ron, menta, azúcar, limón y soda</li>
-                                    <li><strong>Piña Colada</strong> - Ron, crema de coco y piña</li>
-                                    <li><strong>Caipirinha</strong> - Cachaça, azúcar y lima</li>
+                                    <li><strong>Lunes a Domingo:</strong></li>
+                                    <ul style="padding-left: 20px; margin: 5px 0;">
+                                        <li><strong>Mañana (calma):</strong> 7:00 AM – 10:00 AM</li>
+                                        <li><strong>Tarde (vistas al atardecer):</strong> 4:00 PM – 7:00 PM</li>
+                                    </ul>
+                                    <li><strong>Tour guiado (sábados):</strong> 8:00 AM – 10:00 AM</li>
                                 </ul>
                             </div>
 
                             <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🍺 Cervezas</h3>
+                                <h3 style="color: #1abc9c; margin: 5px 0;">💰 Tarifas</h3>
                                 <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Rubia</strong> - Ligera y refrescante</li>
-                                    <li><strong>Roja</strong> - Con cuerpo y sabor intenso</li>
-                                    <li><strong>Negra</strong> - Suave y cremosa</li>
+                                    <li><strong>1 hora (alquiler básico):</strong> $25 USD</li>
+                                    <li><strong>2 horas (experiencia premium):</strong> $40 USD</li>
+                                    <li><strong>Tour grupal (2h + guía):</strong> $55 USD/persona</li>
+                                    <li><strong>Clase introductoria (30 min + equipo):</strong> $35 USD</li>
                                 </ul>
                             </div>
 
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🥃 Licores</h3>
+                            <div>
+                                <h3 style="color: #1abc9c; margin: 5px 0;">📌 Recomendaciones y Equipo</h3>
                                 <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Whisky</strong> - Escocés, suave y ahumado</li>
-                                    <li><strong>Vodka</strong> - Neutro y puro</li>
-                                    <li><strong>Ron</strong> - Dulce y aromático</li>
+                                    <li>Incluye tabla, remo y chaleco salvavidas.</li>
+                                    <li>Traer ropa cómoda, protector solar y gorra.</li>
+                                    <li>Nivel principiante: Aguas tranquilas (bahía protegida).</li>
+                                    <li>Fotos profesionales disponibles (+$15 USD).</li>
                                 </ul>
                             </div>
                         </div>
@@ -288,60 +320,58 @@
             <q-dialog v-model="modal5">
                 <q-card style="width: 700px; max-width: 80vw;">
                     <q-card-section>
-                        <div class="text-h6">MENU COMIDA VEGETARIANA & VEGANA</div>
+                        <h3 style="color: #27ae60; margin: 5px 0;">🎾 Tenis</h3>
                     </q-card-section>
 
                     <q-card-section class="q-pt-none">
-                        <div style="font-family: 'Arial', sans-serif; max-width: 100%; color: #333;">
-                            <div style="margin-bottom: 20px; border-bottom: 1px dashed #4CAF50; padding-bottom: 10px;">
-                                <h3 style="color: #4CAF50; margin: 5px 0;">🥗 ENTRADAS VEGGIE</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0; list-style-type: none;">
-                                    <li><strong>Ceviche de champiñones</strong> - <span
-                                            style="color: #8BC34A;">[Vegano]</span><br>Hongos marinados en limón,
-                                        cilantro, cebolla morada y camote</li>
-                                    <li><strong>Bruschettas mediterráneas</strong> - <span
-                                            style="color: #FFC107;">[Vegetariano]</span><br>Pan tostado con tomate,
-                                        albahaca y queso de cabra</li>
+                        <div style="font-family: Arial, sans-serif; max-width: 100%;">
+                            <div style="margin-bottom: 15px;">
+
+                                <p style="margin: 5px 0; text-align: justify;">
+                                    Disfruta de nuestro exclusivo club de tenis con canchas profesionales de superficie
+                                    dura.
+                                    Perfecto para partidos individuales o dobles, con equipamiento de primera calidad.
+                                    Ofrecemos clases para todos los niveles, desde principiantes hasta avanzados.
+                                </p>
+                            </div>
+
+                            <div style="margin-bottom: 15px;">
+                                <h3 style="color: #27ae60; margin: 5px 0;">⏰ Horarios de Cancha</h3>
+                                <ul style="padding-left: 20px; margin: 5px 0;">
+                                    <li><strong>Lunes a Viernes:</strong></li>
+                                    <ul style="padding-left: 20px; margin: 5px 0;">
+                                        <li><strong>Mañana:</strong> 6:00 AM - 12:00 PM</li>
+                                        <li><strong>Tarde:</strong> 3:00 PM - 10:00 PM</li>
+                                    </ul>
+                                    <li><strong>Fin de Semana:</strong></li>
+                                    <ul style="padding-left: 20px; margin: 5px 0;">
+                                        <li><strong>Sábado:</strong> 7:00 AM - 8:00 PM</li>
+                                        <li><strong>Domingo:</strong> 8:00 AM - 6:00 PM</li>
+                                    </ul>
                                 </ul>
                             </div>
 
-                            <div style="margin-bottom: 20px; border-bottom: 1px dashed #4CAF50; padding-bottom: 10px;">
-                                <h3 style="color: #4CAF50; margin: 5px 0;">🌯 PLATOS PRINCIPALES</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0; list-style-type: none;">
-                                    <li><strong>Buddha Bowl player</strong> - <span
-                                            style="color: #8BC34A;">[Vegano]</span><br>Quinoa, aguacate, garbanzos,
-                                        espinaca y tahini</li>
-                                    <li><strong>Tacos de jackfruit</strong> - <span
-                                            style="color: #8BC34A;">[Vegano]</span><br>"Carne" de jaca desmenuzada con
-                                        piña y salsa BBQ</li>
+                            <div style="margin-bottom: 15px;">
+                                <h3 style="color: #27ae60; margin: 5px 0;">💲 Tarifas</h3>
+                                <ul style="padding-left: 20px; margin: 5px 0;">
+                                    <li><strong>Alquiler de cancha (1 hora):</strong> $30 USD</li>
+                                    <li><strong>Clase individual (1 hora):</strong> $50 USD</li>
+                                    <li><strong>Clase grupal (máx. 4 personas):</strong> $25 USD/persona</li>
+                                    <li><strong>Pack mensual (8 horas):</strong> $200 USD (20% descuento)</li>
                                 </ul>
                             </div>
 
-                            <div style="margin-bottom: 20px; border-bottom: 1px dashed #4CAF50; padding-bottom: 10px;">
-                                <h3 style="color: #4CAF50; margin: 5px 0;">🍔 HAMBURGUESAS</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0; list-style-type: none;">
-                                    <li><strong>Burger de lentejas</strong> - <span
-                                            style="color: #8BC34A;">[Vegano]</span><br>Hamburguesa casera con quinoa y
-                                        hongos</li>
-                                    <li><strong>Sándwich caprese</strong> - <span
-                                            style="color: #FFC107;">[Vegetariano]</span><br>Pan ciabatta con tomate,
-                                        mozzarella y pesto</li>
+                            <div>
+                                <h3 style="color: #27ae60; margin: 5px 0;">📌 Servicios Incluidos</h3>
+                                <ul style="padding-left: 20px; margin: 5px 0;">
+                                    <li>Raquetas profesionales disponibles (sin costo adicional)</li>
+                                    <li>Pelotas de tenis incluidas en el alquiler</li>
+                                    <li>Área de descanso con bebidas frías</li>
+                                    <li>Vestuarios con duchas disponibles</li>
+                                    <li>Iluminación nocturna para partidos vespertinos</li>
                                 </ul>
                             </div>
-
-                            <div style="margin-bottom: 20px; border-bottom: 1px dashed #4CAF50; padding-bottom: 10px;">
-                                <h3 style="color: #4CAF50; margin: 5px 0;">🥤 BEBIDAS</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0; list-style-type: none;">
-                                    <li><strong>Smoothie verde</strong> - <span
-                                            style="color: #8BC34A;">[Vegano]</span><br>Espinaca, piña, plátano y leche
-                                        de almendras</li>
-                                    <li><strong>Limonada de lavanda</strong> - <span
-                                            style="color: #8BC34A;">[Vegano]</span></li>
-                                </ul>
-                            </div>
-
                         </div>
-
                     </q-card-section>
 
                     <q-card-actions align="right" class="bg-white text-teal">
@@ -353,95 +383,55 @@
             <q-dialog v-model="modal6">
                 <q-card style="width: 700px; max-width: 80vw;">
                     <q-card-section>
-                        <div class="text-h6">MENU COMIDA TRADICIONAL</div>
+                        <h3 style="color: #e74c3c; margin: 5px 0;">🏓 Ping Pong</h3>
                     </q-card-section>
 
                     <q-card-section class="q-pt-none">
-                        <div style="font-family: 'Arial', sans-serif; max-width: 100%; color: #333; line-height: 1.5; max-height: 60vh; overflow-y: auto;">
+                        <div style="font-family: Arial, sans-serif; max-width: 100%;">
+                            <div style="margin-bottom: 15px;">
 
-                            <h4
-                                style="color: #F44336; border-bottom: 2px solid #F44336; padding-bottom: 5px; margin-top: 20px;">
-                                🍛 Platos Fuertes</h4>
-                            <ul style="padding-left: 20px; list-style-type: none; margin-top: 10px;">
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Bandeja Paisa</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Frijoles, arroz, chicharrón, carne molida, chorizo, huevo, aguacate y arepa
-                                    </div>
-                                </li>
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Ajiaco Santafereño</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Sopa de pollo con tres papas, guascas, crema de leche y alcaparras
-                                    </div>
-                                </li>
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Sancocho Trifásico</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Carne de res, cerdo y pollo con yuca, plátano y ñame
-                                    </div>
-                                </li>
-                            </ul>
+                                <p style="margin: 5px 0; text-align: justify;">
+                                    ¡Diversión rápida y emocionante en nuestras mesas profesionales de ping pong!
+                                    Perfecto para jugar en parejas o individual. Disponemos de equipos de alta calidad
+                                    en un espacio climatizado. Ideal para torneos casuales o práctica seria.
+                                </p>
+                            </div>
 
-                            <h4
-                                style="color: #4CAF50; border-bottom: 2px solid #4CAF50; padding-bottom: 5px; margin-top: 20px;">
-                                🌽 Acompañamientos</h4>
-                            <ul style="padding-left: 20px; list-style-type: none; margin-top: 10px;">
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Arepas</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Blancas, de queso o de choclo (maíz tierno)
-                                    </div>
-                                </li>
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Patacones</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Plátano verde aplastado y frito dos veces
-                                    </div>
-                                </li>
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Arroz con Coco</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Típico de la costa Caribe
-                                    </div>
-                                </li>
-                            </ul>
+                            <div style="margin-bottom: 15px;">
+                                <h3 style="color: #e74c3c; margin: 5px 0;">⏰ Horarios Disponibles</h3>
+                                <ul style="padding-left: 20px; margin: 5px 0;">
+                                    <li><strong>Lunes a Viernes:</strong></li>
+                                    <ul style="padding-left: 20px; margin: 5px 0;">
+                                        <li><strong>Mañana:</strong> 9:00 AM - 1:00 PM</li>
+                                        <li><strong>Tarde/Noche:</strong> 4:00 PM - 10:00 PM</li>
+                                    </ul>
+                                    <li><strong>Sábado y Domingo:</strong></li>
+                                    <ul style="padding-left: 20px; margin: 5px 0;">
+                                        <li><strong>Jornada continua:</strong> 10:00 AM - 8:00 PM</li>
+                                    </ul>
+                                </ul>
+                            </div>
 
-                            <h4
-                                style="color: #9C27B0; border-bottom: 2px solid #9C27B0; padding-bottom: 5px; margin-top: 20px;">
-                                🍮 Postres</h4>
-                            <ul style="padding-left: 20px; list-style-type: none; margin-top: 10px;">
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Postre de Natas</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Dulce tradicional antioqueño
-                                    </div>
-                                </li>
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Mogolla Bogotana</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Pan dulce esponjoso
-                                    </div>
-                                </li>
-                            </ul>
+                            <div style="margin-bottom: 15px;">
+                                <h3 style="color: #e74c3c; margin: 5px 0;">💰 Tarifas</h3>
+                                <ul style="padding-left: 20px; margin: 5px 0;">
+                                    <li><strong>30 minutos:</strong> $10 USD</li>
+                                    <li><strong>1 hora:</strong> $15 USD</li>
+                                    <li><strong>Hora grupal (máx. 4 personas):</strong> $25 USD</li>
+                                    <li><strong>Torneo semanal (inscripción):</strong> $8 USD/persona</li>
+                                </ul>
+                            </div>
 
-                            <h4
-                                style="color: #2196F3; border-bottom: 2px solid #2196F3; padding-bottom: 5px; margin-top: 20px;">
-                                🥤 Bebidas Típicas</h4>
-                            <ul style="padding-left: 20px; list-style-type: none; margin-top: 10px;">
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Aguapanela con queso</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Bebida caliente de panela con trozos de queso campesino
-                                    </div>
-                                </li>
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Lulada</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Refresco de lulo con trozos de fruta (Valle del Cauca)
-                                    </div>
-                                </li>
-                            </ul>
+                            <div>
+                                <h3 style="color: #e74c3c; margin: 5px 0;">🎯 Servicios Incluidos</h3>
+                                <ul style="padding-left: 20px; margin: 5px 0;">
+                                    <li>Raquetas profesionales (Donic, Butterfly)</li>
+                                    <li>Pelotas de 3 estrellas (calidad torneo)</li>
+                                    <li>Marcador electrónico automático</li>
+                                    <li>Área lounge con bebidas</li>
+                                    <li>Clases rápidas de iniciación (gratis los miércoles)</li>
+                                </ul>
+                            </div>
                         </div>
                     </q-card-section>
 

@@ -7,7 +7,7 @@
             </div>
         </div>
         <div class="centrar">
-            <h1 class="textos">Cena con los pies en la arena y el alma en el paraíso.</h1>
+            <h1 class="textos">Despierta con el sonido de las olas y duérme bajo las estrellas.</h1>
         </div>
 
         <div class="infocenter">
