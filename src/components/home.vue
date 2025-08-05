@@ -2,7 +2,7 @@
 
     <div class="all">
         <div>
-            <img src="./public/img/hotelhome.jpg" alt="" style="width: 100%;">
+            <img src="../public/img/hotelhome.jpg" alt="" style="width: 100%;">
             <div class="encima">
                 <h1 id="textollamativo">LUJO, TRANQUILIDAD Y BRISA MARINA... TODO EN UN MISMO LUGAR.</h1>
                 <button34 label="RESERVA AQUI!" to="/habitaciones"/>
