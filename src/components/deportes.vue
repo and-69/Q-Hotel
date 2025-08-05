@@ -1,7 +1,7 @@
 <template>
     <div class="all">
         <div>
-            <img src="/public/img/portadadeportes.jpg" alt="" style="width: 100%;">
+            <img src="/img/portadadeportes.jpg" alt="" style="width: 100%;">
             <div class="encima">
                 <h1 id="textollamativo">¿LISTO PARA LA ACCION? VIVE LA ADRENALINA DE DEPORTES PLAYEROS.</h1>
             </div>
@@ -12,27 +12,27 @@
 
         <div class="infocenter">
             <div class="cardsinfo">
-                <cards img="/public/img/jetski.jpg" title="JETKSY" label="Consultar informacion"
+                <cards img="/img/jetski.jpg" title="JETKSY" label="Consultar informacion"
                     @button-click="modalListaJt = true" />
                 <modalList v-model="modalListaJt" :menuSections="jetskiMenu" />
 
-                <cards img="/public/img/badminton.jpg" title="BADMINTON" label="Consultar informacion"
+                <cards img="/img/badminton.jpg" title="BADMINTON" label="Consultar informacion"
                     @button-click="modalListaBd = true" />
                 <modalList v-model="modalListaBd" :menuSections="badmintonMenu" />
                 
-                <cards img="/public/img/squash.jpg" title="SQUASH" label="Consultar informacion"
+                <cards img="/img/squash.jpg" title="SQUASH" label="Consultar informacion"
                     @button-click="modalListaSq = true" />
                 <modalList v-model="modalListaSq" :menuSections="squashMenu" />
 
-                <cards img="/public/img/paddleboard.jpg" title="PADDLEBOARD" label="Consultar informacion"
+                <cards img="/img/paddleboard.jpg" title="PADDLEBOARD" label="Consultar informacion"
                     @button-click="modalListaPd = true" />
                 <modalList v-model="modalListaPd" :menuSections="paddleboardMenu" />
                 
-                <cards img="/public/img/tennis.jpg" title="TENNIS" label="Consultar informacion"
+                <cards img="/img/tennis.jpg" title="TENNIS" label="Consultar informacion"
                     @button-click="modalListaTn = true" />
                 <modalList v-model="modalListaTn" :menuSections="tenisMenu" />
 
-                <cards img="/public/img/pinpon.jpg" title="PIN PON" label="Consultar informacion"
+                <cards img="/img/pinpon.jpg" title="PIN PON" label="Consultar informacion"
                     @button-click="modalListaPp = true" />
                 <modalList v-model="modalListaPp" :menuSections="pingPongMenu" />
                 
