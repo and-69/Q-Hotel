@@ -2,7 +2,7 @@
 
     <div class="all">
         <div>
-            <img src="/public/img/hotelhome.jpg" alt="" style="width: 100%;">
+            <img src="/img/hotelhome.jpg" alt="" style="width: 100%;">
             <div class="encima">
                 <h1 id="textollamativo">LUJO, TRANQUILIDAD Y BRISA MARINA... TODO EN UN MISMO LUGAR.</h1>
                 <button34 label="RESERVA AQUI!" to="/habitaciones"/>
@@ -14,10 +14,10 @@
         </div>
         <div class="row items-center justify-center">
         <div class="pngs col-12 col-md-6 col-lg-12">
-            <img src="/public/img/pngegg.png" alt="">
-            <img src="/public/img/pngegg (1).png" alt="">
-            <img src="/public/img/playita.png" alt="">
-            <img src="/public/img/pngegg (2).png" alt="">
+            <img src="/img/pngegg.png" alt="">
+            <img src="/img/pngegg (1).png" alt="">
+            <img src="/img/playita.png" alt="">
+            <img src="/img/pngegg (2).png" alt="">
         </div>
         </div>
         <div class="centrar">
@@ -27,25 +27,25 @@
         <div class="infoCenter">
             <div class="cardsinfo">
                 <cardHome
-                    img="public/img/habt-hotel.jpg"
+                    img="/img/habt-hotel.jpg"
                     title="Bungalows y Habitaciones"
                     label="Visitar Sitio"
                     to="/habitaciones"
                 />
                 <cardHome
-                    img="public/img/restaurante.jpg"
+                    img="/img/restaurante.jpg"
                     title="Bares y Restaurantes"
                     label="Visitar Sitio"
                     to="/gastronomia"
                 />
                 <cardHome
-                    img="public/img/spa-home.jpg"
+                    img="/img/spa-home.jpg"
                     title="Recreacion y Servicios"
                     label="Visitar Sitio"
                     to="/servicios"
                 />
                 <cardHome
-                    img="public/img/jetsky.jpg"
+                    img="/img/jetsky.jpg"
                     title="Deportes y diversion extrema"
                     label="Visitar Sitio"
                     to="/deportes"
