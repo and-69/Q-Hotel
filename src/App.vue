@@ -8,7 +8,7 @@
 
           <q-toolbar-title>
             <q-avatar>
-              <img src="/public/img/tortuga (2).png">
+              <img src="/img/tortuga (2).png">
             </q-avatar>
             TURTLE ISLAND HOTEL
           </q-toolbar-title>
@@ -44,7 +44,7 @@
           </q-toolbar-title>
           <div class="q-ml-auto">
             <q-avatar>
-              <img src="/public/img/tortuga (2).png">
+              <img src="/img/tortuga (2).png">
             </q-avatar>
           </div>
         </q-toolbar>
