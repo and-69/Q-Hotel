@@ -1,7 +1,7 @@
 <template>
     <div class="all">
         <div>
-            <img src="/public/img/serviciosbg.jpg" alt="" style="width: 100%;">
+            <img src="/img/serviciosbg.jpg" alt="" style="width: 100%;">
             <div class="encima">
                 <h1 id="textollamativo">MAS QUE UN HOTEL, UNA EXPERIENCIA FRNTE AL MAR.</h1>
             </div>
@@ -12,27 +12,27 @@
 
         <div class="infocenter">
             <div class="cardsinfo">
-                <cards img="/public/img/spaservicio.jpg" title="SPA" label="Consultar informacion"
+                <cards img="/img/spaservicio.jpg" title="SPA" label="Consultar informacion"
                     @button-click="modalListaSp = true" />
                 <modalList v-model="modalListaSp" :menuSections="menuSpa" />
 
-                <cards img="/public/img/yoga.jpg" title="YOGA" label="Consultar informacion"
+                <cards img="/img/yoga.jpg" title="YOGA" label="Consultar informacion"
                     @button-click="modalListaYg = true" />
                 <modalList v-model="modalListaYg" :menuSections="menuYoga" />
 
-                <cards img="/public/img/piscina.jpg" title="PISCINA" label="Consultar informacion"
+                <cards img="/img/piscina.jpg" title="PISCINA" label="Consultar informacion"
                     @button-click="modalListaPs = true" />
                 <modalList v-model="modalListaPs" :menuSections="menuPiscina" />
 
-                <cards img="/public/img/salon.jpg" title="SALON SOCIAL / SALON DE EVENTOS" label="Consultar informacion"
+                <cards img="/img/salon.jpg" title="SALON SOCIAL / SALON DE EVENTOS" label="Consultar informacion"
                     @button-click="modalListaSe = true" />
                 <modalList v-model="modalListaSe" :menuSections="menuEventos" />
 
-                <cards img="/public/img/jacuzzi.jpg" title="JACUZZI" label="Consultar informacion"
+                <cards img="/img/jacuzzi.jpg" title="JACUZZI" label="Consultar informacion"
                     @button-click="modalListaJz = true" />
                 <modalList v-model="modalListaJz" :menuSections="menuJacuzzi" />
 
-                <cards img="/public/img/gym.jpg" title="GIMNASIO" label="Consultar informacion"
+                <cards img="/img/gym.jpg" title="GIMNASIO" label="Consultar informacion"
                     @button-click="modalListaGm = true" />
                 <modalList v-model="modalListaGm" :menuSections="menuGimnasio" />
             </div>
