@@ -1,7 +1,7 @@
 <template>
     <div class="all">
         <div>
-            <img src="/public/img/habitacion5.jpg" alt="" style="width: 100%;">
+            <img src="/img/habitacion5.jpg" alt="" style="width: 100%;">
             <div class="encima">
                 <h1 id="textollamativo">EL MEJOR ATARDECER LO TIENES DESDE TU HABITACION.</h1>
             </div>
