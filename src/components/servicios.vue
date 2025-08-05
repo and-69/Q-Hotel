@@ -12,557 +12,233 @@
 
         <div class="infocenter">
             <div class="cardsinfo">
-                <q-card class="my-card">
-                    <q-img src="/public/img/spaservicio.jpg" class="img-card">
-                        <div class="absolute-bottom">
-                            <div class="text-h6">SPA</div>
-                        </div>
-                    </q-img>
+                <cards img="/public/img/spaservicio.jpg" title="SPA" label="Consultar informacion"
+                    @button-click="modalListaSp = true" />
+                <modalList v-model="modalListaSp" :menuSections="menuSpa" />
 
-                    <q-card-actions>
-                        <q-btn class="button-34" flat @click="modal1 = true">Consultar informacion</q-btn>
-                    </q-card-actions>
-                </q-card>
-                <q-card class="my-card">
-                    <q-img src="/public/img/yoga.jpg" class="img-card">
-                        <div class="absolute-bottom">
-                            <div class="text-h6">YOGA</div>
-                        </div>
-                    </q-img>
+                <cards img="/public/img/yoga.jpg" title="YOGA" label="Consultar informacion"
+                    @button-click="modalListaYg = true" />
+                <modalList v-model="modalListaYg" :menuSections="menuYoga" />
 
-                    <q-card-actions>
-                        <q-btn class="button-34" flat @click="modal2 = true">Consultar informacion</q-btn>
-                    </q-card-actions>
-                </q-card>
-                <q-card class="my-card">
-                    <q-img src="/public/img/piscina.jpg" class="img-card">
-                        <div class="absolute-bottom">
-                            <div class="text-h6">PISCINA</div>
-                        </div>
-                    </q-img>
+                <cards img="/public/img/piscina.jpg" title="PISCINA" label="Consultar informacion"
+                    @button-click="modalListaPs = true" />
+                <modalList v-model="modalListaPs" :menuSections="menuPiscina" />
 
-                    <q-card-actions>
-                        <q-btn class="button-34" flat @click="modal3 = true">Consultar informacion</q-btn>
-                    </q-card-actions>
-                </q-card>
-                <q-card class="my-card">
-                    <q-img src="/public/img/salon.jpg" class="img-card">
-                        <div class="absolute-bottom">
-                            <div class="text-h6">SALON SOCIAL/ SALON DE EVENTOS</div>
-                        </div>
-                    </q-img>
+                <cards img="/public/img/salon.jpg" title="SALON SOCIAL / SALON DE EVENTOS" label="Consultar informacion"
+                    @button-click="modalListaSe = true" />
+                <modalList v-model="modalListaSe" :menuSections="menuEventos" />
 
-                    <q-card-actions>
-                        <q-btn class="button-34" flat @click="modal4 = true">Consultar informacion</q-btn>
-                    </q-card-actions>
-                </q-card>
-                <q-card class="my-card">
-                    <q-img src="/public/img/jacuzzi.jpg" class="img-card">
-                        <div class="absolute-bottom">
-                            <div class="text-h6">JACUZZI</div>
-                        </div>
-                    </q-img>
+                <cards img="/public/img/jacuzzi.jpg" title="JACUZZI" label="Consultar informacion"
+                    @button-click="modalListaJz = true" />
+                <modalList v-model="modalListaJz" :menuSections="menuJacuzzi" />
 
-                    <q-card-actions>
-                        <q-btn class="button-34" flat @click="modal5 = true">Consultar informacion</q-btn>
-                    </q-card-actions>
-                </q-card><q-card class="my-card">
-                    <q-img src="/public/img/gym.jpg" class="img-card">
-                        <div class="absolute-bottom">
-                            <div class="text-h6">GIMNASIO</div>
-                        </div>
-                    </q-img>
-
-                    <q-card-actions>
-                        <q-btn class="button-34" flat @click="modal6 = true">Consultar informacion</q-btn>
-                    </q-card-actions>
-                </q-card>
+                <cards img="/public/img/gym.jpg" title="GIMNASIO" label="Consultar informacion"
+                    @button-click="modalListaGm = true" />
+                <modalList v-model="modalListaGm" :menuSections="menuGimnasio" />
             </div>
-        </div>
-
-        <div>
-            <q-dialog v-model="modal1">
-                <q-card style="width: 700px; max-width: 80vw;">
-                    <q-card-section>
-                        <h3 style="color: #9b59b6; margin: 5px 0;">💆‍♀️ Spa "Serenidad"</h3>
-                    </q-card-section>
-
-                    <q-card-section class="q-pt-none">
-                        <div style="font-family: Arial, sans-serif; max-width: 100%;">
-                            <div style="margin-bottom: 15px;">
-
-                                <p style="margin: 5px 0; text-align: justify;">
-                                    Sumérgete en un oasis de relajación en nuestro spa premium. Con tratamientos
-                                    personalizados
-                                    usando productos orgánicos y técnicas ancestrales, te ofrecemos una experiencia de
-                                    bienestar
-                                    integral. Ambiente tranquilo con aromaterapia, música relajante y profesionales
-                                    certificados.
-                                </p>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #9b59b6; margin: 5px 0;">⏰ Horario de Atención</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Lunes a Viernes:</strong> 9:00 AM - 8:00 PM</li>
-                                    <li><strong>Sábado y Domingo:</strong> 8:00 AM - 9:00 PM</li>
-                                    <li><strong>Última reservación:</strong> 2 horas antes del cierre</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #9b59b6; margin: 5px 0;">✨ Tratamientos Estrella</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Masaje Balinés (90 min):</strong> $120 USD</li>
-                                    <li><strong>Ritual de Chocolate (2h):</strong> $150 USD</li>
-                                    <li><strong>Terapia de Piedras Calientes:</strong> $95 USD</li>
-                                    <li><strong>Facial Rejuvenecedor:</strong> $80 USD</li>
-                                    <li><strong>Pack "Día Completo":</strong> $250 USD (incluye 3 tratamientos +
-                                        almuerzo saludable)</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #9b59b6; margin: 5px 0;">🏛 Instalaciones</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li>4 salas de masaje privadas</li>
-                                    <li>Sauna finlandés y baño de vapor</li>
-                                    <li>Piscina de hidroterapia</li>
-                                    <li>Sala de relajación con té de hierbas</li>
-                                    <li>Área de pedicura/manicura orgánica</li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <h3 style="color: #9b59b6; margin: 5px 0;">📌 Recomendaciones</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li>Reservar con 24h de anticipación</li>
-                                    <li>Llegar 15 minutos antes de su cita</li>
-                                    <li>Traer traje de baño para tratamientos acuáticos</li>
-                                    <li>Paquetes especiales para parejas disponibles</li>
-                                    <li>Descuento del 15% para huéspedes del hotel</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </q-card-section>
-
-                    <q-card-actions align="right" class="bg-white text-teal">
-                        <q-btn flat label="OK" v-close-popup />
-                    </q-card-actions>
-                </q-card>
-            </q-dialog>
-
-            <q-dialog v-model="modal2">
-                <q-card style="width: 700px; max-width: 80vw;">
-                    <q-card-section>
-                        <h3 style="color: #4CAF50; margin: 5px 0;">🧘‍♀️ Yoga & Bienestar</h3>
-                    </q-card-section>
-
-                    <q-card-section class="q-pt-none">
-                        <div style="font-family: Arial, sans-serif; max-width: 100%;">
-                            <div style="margin-bottom: 15px;">
-
-                                <p style="margin: 5px 0; text-align: justify;">
-                                    Conecta cuerpo y mente en nuestras sesiones de yoga con instructores certificados.
-                                    Clases para todos los niveles en un espacio diseñado para la armonía, con vista al
-                                    mar
-                                    y equipamiento profesional. Disfruta de diferentes estilos desde Hatha hasta Vinyasa
-                                    Flow.
-                                </p>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #4CAF50; margin: 5px 0;">⏰ Horario de Clases</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Lunes a Viernes:</strong></li>
-                                    <ul style="padding-left: 20px; margin: 5px 0;">
-                                        <li><strong>Mañana:</strong> 7:00 AM - 8:00 AM (Hatha Yoga)</li>
-                                        <li><strong>Tarde:</strong> 6:00 PM - 7:00 PM (Vinyasa Flow)</li>
-                                    </ul>
-                                    <li><strong>Fin de Semana:</strong></li>
-                                    <ul style="padding-left: 20px; margin: 5px 0;">
-                                        <li><strong>Sábado:</strong> 8:00 AM - 9:30 AM (Yoga Restaurativo)</li>
-                                        <li><strong>Domingo:</strong> 9:00 AM - 10:30 AM (Yoga en la Playa)</li>
-                                    </ul>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #4CAF50; margin: 5px 0;">💰 Tarifas</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Clase individual:</strong> $20 USD</li>
-                                    <li><strong>Pack 5 clases:</strong> $85 USD (15% descuento)</li>
-                                    <li><strong>Clase privada (1h):</strong> $50 USD</li>
-                                    <li><strong>Yoga en pareja:</strong> $30 USD por sesión</li>
-                                    <li><strong>Gratis para huéspedes:</strong> 1 clase de iniciación</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #4CAF50; margin: 5px 0;">🛍️ Incluye</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li>Mat de yoga profesional (o trae el tuyo)</li>
-                                    <li>Toalla aromatizada</li>
-                                    <li>Té herbal post-clase</li>
-                                    <li>Acceso a vestuarios con duchas</li>
-                                    <li>Lockers seguros para pertenencias</li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <h3 style="color: #4CAF50; margin: 5px 0;">📌 Recomendaciones</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li>Usar ropa cómoda y ajustada</li>
-                                    <li>Evitar comer 1 hora antes de clase</li>
-                                    <li>Llegar 10 minutos antes</li>
-                                    <li>Informar al instructor sobre lesiones</li>
-                                    <li>Clases limitadas a 15 personas (reserva con anticipación)</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </q-card-section>
-
-                    <q-card-actions align="right" class="bg-white text-teal">
-                        <q-btn flat label="OK" v-close-popup />
-                    </q-card-actions>
-                </q-card>
-            </q-dialog>
-
-            <q-dialog v-model="modal3">
-                <q-card style="width: 700px; max-width: 80vw;">
-                    <q-card-section>
-                        <h3 style="color: #3498db; margin: 5px 0;">🏊‍♂️ Piscina</h3>
-                    </q-card-section>
-
-                    <q-card-section class="q-pt-none">
-                        <div style="font-family: Arial, sans-serif; max-width: 100%;">
-                            <div style="margin-bottom: 15px;">
-
-                                <p style="margin: 5px 0; text-align: justify;">
-                                    Disfruta de nuestra espectacular piscina con vista al mar, perfecta para relajarse y
-                                    refrescarse.
-                                    Contamos con área de hidromasaje, tumbonas premium y servicio de bar. Ambiente
-                                    familiar con zona
-                                    infantil separada. ¡Todo lo necesario para un día perfecto bajo el sol!
-                                </p>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #3498db; margin: 5px 0;">⏰ Horario</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Lunes a Domingo:</strong></li>
-                                    <ul style="padding-left: 20px; margin: 5px 0;">
-                                        <li><strong>Mañana:</strong> 7:00 AM - 12:00 PM</li>
-                                        <li><strong>Tarde:</strong> 2:00 PM - 8:00 PM</li>
-                                    </ul>
-                                    <li><strong>Horario especial adultos:</strong> 6:00 PM - 8:00 PM</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #3498db; margin: 5px 0;">💧 Normas de Uso</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li>Uso obligatorio de gorro de baño (disponible en recepción)</li>
-                                    <li>Prohibido correr en los bordillos</li>
-                                    <li>Los niños menores de 12 años deben estar supervisados</li>
-                                    <li>No se permite comida en el área de la piscina</li>
-                                    <li>Ducharse antes de ingresar</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #3498db; margin: 5px 0;">🍹 Servicios Adicionales</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Alquiler de toallas:</strong> $5 USD</li>
-                                    <li><strong>Kit premium:</strong> Toalla, bata y pantuflas ($15 USD)</li>
-                                    <li><strong>Servicio de bar:</strong> Bebidas y snacks sin alcohol</li>
-                                    <li><strong>Clases de aquagym:</strong> 9:00 AM y 5:00 PM (gratis para huéspedes)
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <h3 style="color: #3498db; margin: 5px 0;">🏆 Características</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li>Temperatura controlada (28°C)</li>
-                                    <li>Sistema de filtrado salino (sin cloro agresivo)</li>
-                                    <li>Profundidad: 1.20m a 2.40m</li>
-                                    <li>Zona de hidromasaje con capacidad para 8 personas</li>
-                                    <li>Área infantil con profundidad de 0.60m</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </q-card-section>
-
-                    <q-card-actions align="right" class="bg-white text-teal">
-                        <q-btn flat label="OK" v-close-popup />
-                    </q-card-actions>
-                </q-card>
-            </q-dialog>
-
-            <q-dialog v-model="modal4">
-                <q-card style="width: 700px; max-width: 80vw;">
-                    <q-card-section>
-                        <h3 style="color: #8e44ad; margin: 5px 0;">🎪 Salón de Eventos "Gala"</h3>
-                    </q-card-section>
-
-                    <q-card-section class="q-pt-none">
-                        <div style="font-family: Arial, sans-serif; max-width: 100%;">
-                            <div style="margin-bottom: 15px;">
-
-                                <p style="margin: 5px 0; text-align: justify;">
-                                    Nuestro exclusivo salón para eventos es el espacio perfecto para bodas,
-                                    conferencias, fiestas y reuniones empresariales.
-                                    Con capacidad para hasta 200 personas, tecnología de última generación y servicio
-                                    personalizado,
-                                    garantizamos eventos memorables con el sello de calidad de nuestro hotel.
-                                </p>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #8e44ad; margin: 5px 0;">🏛 Características del Espacio</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Capacidad:</strong> 200 personas (configuración banquetes) / 300 (estilo
-                                        teatro)</li>
-                                    <li><strong>Área total:</strong> 350 m² con divisores modulares</li>
-                                    <li><strong>Tecnología:</strong> Sistema de sonido profesional, pantallas LED y
-                                        videoconferencia</li>
-                                    <li><strong>Iluminación:</strong> Sistema inteligente con escenarios preconfigurados
-                                    </li>
-                                    <li><strong>Vista:</strong> Panorámica al jardín tropical y fuentes</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #8e44ad; margin: 5px 0;">⏰ Horarios de Alquiler</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Paquete Matutino:</strong> 8:00 AM - 2:00 PM</li>
-                                    <li><strong>Paquete Vespertino:</strong> 3:00 PM - 9:00 PM</li>
-                                    <li><strong>Jornada Completa:</strong> 8:00 AM - 12:00 AM</li>
-                                    <li><strong>Eventos Nocturnos:</strong> 8:00 PM - 2:00 AM (costo adicional)</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #8e44ad; margin: 5px 0;">💰 Paquetes Incluidos</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Básico:</strong> $1,200 USD (4 horas, mobiliario básico y sonido)</li>
-                                    <li><strong>Premium:</strong> $2,500 USD (8 horas, decoración floral y catering para
-                                        50 personas)</li>
-                                    <li><strong>Empresarial:</strong> $1,800 USD (6 horas, videoconferencia y coffee
-                                        break)</li>
-                                    <li><strong>Boda:</strong> $3,500 USD (12 horas, coordinador de evento y suite
-                                        nupcial)</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #8e44ad; margin: 5px 0;">🍽 Servicios Adicionales</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li>Catering gourmet (desde $25 USD por persona)</li>
-                                    <li>Decoración temática profesional</li>
-                                    <li>Servicio de fotografía/video</li>
-                                    <li>Animación y DJ</li>
-                                    <li>Transporte especial para invitados</li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <h3 style="color: #8e44ad; margin: 5px 0;">📌 Políticas</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li>Reserva mínima con 30 días de anticipación</li>
-                                    <li>50% de depósito no reembolsable</li>
-                                    <li>Capacidad según normativas de seguridad</li>
-                                    <li>Lista de proveedores aprobados disponible</li>
-                                    <li>Descuento del 10% para eventos de lunes a jueves</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </q-card-section>
-                </q-card>
-            </q-dialog>
-
-            <q-dialog v-model="modal5">
-                <q-card style="width: 700px; max-width: 80vw;">
-                    <q-card-section>
-                        <h3 style="color: #3498db; margin: 5px 0;">♨️ Jacuzzi Premium</h3>
-                    </q-card-section>
-
-                    <q-card-section class="q-pt-none">
-                        <div style="font-family: Arial, sans-serif; max-width: 100%;">
-                            <div style="margin-bottom: 15px;">
-
-                                <p style="margin: 5px 0; text-align: justify;">
-                                    Relájese en nuestro lujoso jacuzzi con sistema de hidromasaje, iluminación LED y
-                                    vistas panorámicas.
-                                    Agua termal mantenida a 38°C con sistema de purificación avanzado.
-                                    Perfecto para parejas o grupos pequeños, disponible tanto en áreas privadas como en
-                                    la zona spa.
-                                </p>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #3498db; margin: 5px 0;">⏰ Horario de Uso</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Lunes a Domingo:</strong> 8:00 AM - 10:00 PM</li>
-                                    <li><strong>Sesiones privadas:</strong> 6:00 PM - 10:00 PM (reserva requerida)</li>
-                                    <li><strong>Duración:</strong> Sesiones de 45 minutos (renovable según
-                                        disponibilidad)</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #3498db; margin: 5px 0;">💲 Tarifas</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Uso estándar:</strong> $25 USD por persona (acceso a área compartida)
-                                    </li>
-                                    <li><strong>Sesión privada (hasta 4 personas):</strong> $80 USD/45 min</li>
-                                    <li><strong>Pack romántico:</strong> $120 USD (flores, champán y chocolate
-                                        incluidos)</li>
-                                    <li><strong>Terapia acuática:</strong> $60 USD (con fisioterapeuta certificado)</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #3498db; margin: 5px 0;">🌿 Beneficios</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li>Alivio para dolores musculares y estrés</li>
-                                    <li>Mejora la circulación sanguínea</li>
-                                    <li>Sistema de hidroterapia con 32 jets</li>
-                                    <li>Aromaterapia opcional (lavanda o eucalipto)</li>
-                                    <li>Toallas y albornoz de algodón egipcio incluidos</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #3498db; margin: 5px 0;">🚨 Normas de Seguridad</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li>Máximo 6 personas en jacuzzi compartido</li>
-                                    <li>No apto para menores de 12 años</li>
-                                    <li>Ducharse antes de ingresar</li>
-                                    <li>Prohibido el uso bajo efectos del alcohol</li>
-                                    <li>Tiempo máximo continuo: 20 minutos</li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <h3 style="color: #3498db; margin: 5px 0;">🌟 Experiencias Premium</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Noche estrellada:</strong> Uso nocturno con decoración luminosa</li>
-                                    <li><strong>Terapia de contrastes:</strong> Alternancia jacuzzi/baño de hielo</li>
-                                    <li><strong>Masaje en el agua:</strong> Combinación con shiatsu acuático</li>
-                                    <li><strong>Descuentos:</strong> 15% para huéspedes en paquetes spa</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </q-card-section>
-                    <q-card-actions align="right" class="bg-white text-teal">
-                        <q-btn flat label="OK" v-close-popup />
-                    </q-card-actions>
-                </q-card>
-            </q-dialog>
-
-            <q-dialog v-model="modal6">
-                <q-card style="width: 700px; max-width: 80vw;">
-                    <q-card-section>
-                        <h3 style="color: #e74c3c; margin: 5px 0;">💪 Gimnasio "Energía Vital"</h3>
-                    </q-card-section>
-
-                    <q-card-section class="q-pt-none">
-                        <div style="font-family: Arial, sans-serif; max-width: 100%;">
-                            <div style="margin-bottom: 15px;">
-
-                                <p style="margin: 5px 0; text-align: justify;">
-                                    Nuestro gimnasio premium cuenta con equipos de última generación y espacios
-                                    diseñados para entrenamiento funcional.
-                                    Con vista al mar y ambiente climatizado, ofrecemos todo lo necesario para mantener
-                                    tu rutina de ejercicios
-                                    mientras disfrutas de tu estadía. ¡Incluye acceso a entrenador virtual y clases
-                                    grupales!
-                                </p>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e74c3c; margin: 5px 0;">⏰ Horario</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Lunes a Viernes:</strong> 5:30 AM - 10:00 PM</li>
-                                    <li><strong>Sábado y Domingo:</strong> 7:00 AM - 9:00 PM</li>
-                                    <li><strong>Horario pico:</strong> 6:00 AM - 8:00 AM | 5:00 PM - 7:00 PM</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e74c3c; margin: 5px 0;">🏋️ Equipamiento</h3>
-                                <div style="display: flex; flex-wrap: wrap;">
-                                    <div style="flex: 50%;">
-                                        <ul style="padding-left: 20px; margin: 5px 0;">
-                                            <li>Cintas de correr TechnoGym</li>
-                                            <li>Elípticas con pantallas táctiles</li>
-                                            <li>Pesas libres hasta 50kg</li>
-                                            <li>Máquinas de resistencia</li>
-                                        </ul>
-                                    </div>
-                                    <div style="flex: 50%;">
-                                        <ul style="padding-left: 20px; margin: 5px 0;">
-                                            <li>Estación de Functional Training</li>
-                                            <li>Bicicletas spinning</li>
-                                            <li>Área de stretching</li>
-                                            <li>Box de CrossFit</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e74c3c; margin: 5px 0;">🚿 Servicios</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Toallas y botellas de agua:</strong> Incluidas</li>
-                                    <li><strong>Vestuarios:</strong> Con duchas y lockers</li>
-                                    <li><strong>Evaluación física:</strong> Gratis para huéspedes (+3 noches)</li>
-                                    <li><strong>Tienda de suplementos:</strong> Proteínas y bebidas energéticas</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e74c3c; margin: 5px 0;">🧑‍🏫 Clases Grupales</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Spinning:</strong> Lunes, Miércoles, Viernes 7:00 AM</li>
-                                    <li><strong>HIIT:</strong> Martes y Jueves 6:30 PM</li>
-                                    <li><strong>Yoga Fitness:</strong> Diario 8:00 AM</li>
-                                    <li><strong>Boxeo:</strong> Sábados 9:00 AM</li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <h3 style="color: #e74c3c; margin: 5px 0;">📌 Normas</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li>Uso obligatorio de calzado deportivo</li>
-                                    <li>Llevar toalla para usar los equipos</li>
-                                    <li>Prohibido ingresar con alimentos</li>
-                                    <li>Menores de 16 años acompañados</li>
-                                    <li>Desinfección obligatoria post-uso</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </q-card-section>
-
-                    <q-card-actions align="right" class="bg-white text-teal">
-                        <q-btn flat label="OK" v-close-popup />
-                    </q-card-actions>
-                </q-card>
-            </q-dialog>
-        </div>
+        </div> 
     </div>
 </template>
+
 <script setup>
 import { ref } from 'vue'
+import cards from './cards.vue'
+import modalList from './modalList.vue'
 
-const modal1 = ref(false)
-const modal2 = ref(false)
-const modal3 = ref(false)
-const modal4 = ref(false)
-const modal5 = ref(false)
-const modal6 = ref(false)
+
+const modalListaSp = ref(false)
+const modalListaYg = ref(false)
+const modalListaPs = ref(false)
+const modalListaSe = ref(false)
+const modalListaJz = ref(false)
+const modalListaGm = ref(false)
+
+const menuSpa = [
+    {
+        title: "Spa 'Serenidad'",
+        icon: "💆‍♀️",
+        items: [
+            {
+                name: "Descripción",
+                description: "Sumérgete en un oasis de relajación en nuestro spa premium. Con tratamientos personalizados usando productos orgánicos y técnicas ancestrales, te ofrecemos una experiencia de bienestar integral."
+            },
+            {
+                name: "Horario de Atención",
+                description: "Lunes a Viernes: 9:00 AM - 8:00 PM | Sábado y Domingo: 8:00 AM - 9:00 PM | Última reservación: 2 horas antes del cierre"
+            },
+            {
+                name: "Tratamientos Estrella",
+                description: "Masaje Balinés (90 min): $120 USD | Ritual de Chocolate (2h): $150 USD | Terapia de Piedras Calientes: $95 USD | Facial Rejuvenecedor: $80 USD | Pack 'Día Completo': $250 USD"
+            },
+            {
+                name: "Instalaciones",
+                description: "4 salas de masaje privadas | Sauna finlandés y baño de vapor | Piscina de hidroterapia | Sala de relajación con té de hierbas | Área de pedicura/manicura orgánica"
+            },
+            {
+                name: "Recomendaciones",
+                description: "Reservar con 24h de anticipación | Llegar 15 minutos antes | Traer traje de baño | Paquetes para parejas | Descuento del 15% para huéspedes"
+            }
+        ]
+    }
+];
+
+const menuYoga = [
+    {
+        title: "Yoga & Bienestar",
+        icon: "🧘‍♀️",
+        items: [
+            {
+                name: "Descripción",
+                description: "Conecta cuerpo y mente en nuestras sesiones de yoga con instructores certificados. Clases para todos los niveles en un espacio diseñado para la armonía, con vista al mar."
+            },
+            {
+                name: "Horario de Clases",
+                description: "Lunes a Viernes: Mañana 7:00 AM - 8:00 AM (Hatha) | Tarde 6:00 PM - 7:00 PM (Vinyasa) | Sábado: 8:00 AM - 9:30 AM (Restaurativo) | Domingo: 9:00 AM - 10:30 AM (Playa)"
+            },
+            {
+                name: "Tarifas",
+                description: "Clase individual: $20 USD | Pack 5 clases: $85 USD | Clase privada: $50 USD | Yoga en pareja: $30 USD | 1 clase gratis para huéspedes"
+            },
+            {
+                name: "Incluye",
+                description: "Mat de yoga profesional | Toalla aromatizada | Té herbal post-clase | Acceso a vestuarios | Lockers seguros"
+            },
+            {
+                name: "Recomendaciones",
+                description: "Ropa cómoda | No comer 1 hora antes | Llegar 10 minutos antes | Informar lesiones | Máximo 15 personas por clase"
+            }
+        ]
+    }
+];
+
+const menuPiscina = [
+    {
+        title: "Piscina",
+        icon: "🏊‍♂️",
+        items: [
+            {
+                name: "Descripción",
+                description: "Espectacular piscina con vista al mar, perfecta para relajarse y refrescarse. Con área de hidromasaje, tumbonas premium y servicio de bar."
+            },
+            {
+                name: "Horario",
+                description: "Lunes a Domingo: Mañana 7:00 AM - 12:00 PM | Tarde 2:00 PM - 8:00 PM | Horario especial adultos: 6:00 PM - 8:00 PM"
+            },
+            {
+                name: "Normas de Uso",
+                description: "Gorro de baño obligatorio | No correr | Menores de 12 supervisados | No comida en el área | Ducharse antes de ingresar"
+            },
+            {
+                name: "Servicios Adicionales",
+                description: "Alquiler de toallas: $5 USD | Kit premium: $15 USD | Servicio de bar | Clases de aquagym gratis"
+            },
+            {
+                name: "Características",
+                description: "Temperatura controlada (28°C) | Sistema de filtrado salino | Profundidad 1.20m-2.40m | Zona de hidromasaje | Área infantil (0.60m)"
+            }
+        ]
+    }
+];
+
+const menuEventos = [
+    {
+        title: "Salón de Eventos 'Gala'",
+        icon: "🎭",
+        items: [
+            {
+                name: "Descripción",
+                description: "Espacio perfecto para bodas, conferencias y reuniones empresariales. Capacidad para 200 personas, tecnología de última generación y servicio personalizado."
+            },
+            {
+                name: "Características",
+                description: "Capacidad: 200-300 personas | Área: 350 m² | Tecnología profesional | Iluminación inteligente | Vista al jardín tropical"
+            },
+            {
+                name: "Horarios de Alquiler",
+                description: "Matutino: 8AM-2PM | Vespertino: 3PM-9PM | Jornada Completa: 8AM-12AM | Nocturnos: 8PM-2AM (adicional)"
+            },
+            {
+                name: "Paquetes Incluidos",
+                description: "Básico: $1,200 USD | Premium: $2,500 USD | Empresarial: $1,800 USD | Boda: $3,500 USD"
+            },
+            {
+                name: "Servicios Adicionales",
+                description: "Catering desde $25/p | Decoración temática | Fotografía/video | Animación/DJ | Transporte especial"
+            },
+            {
+                name: "Políticas",
+                description: "Reserva con 30 días | 50% depósito no reembolsable | Capacidad según normativas | Proveedores aprobados | 10% descuento lun-jue"
+            }
+        ]
+    }
+];
+
+const menuJacuzzi = [
+    {
+        title: "Jacuzzi Premium",
+        icon: "♨️",
+        items: [
+            {
+                name: "Descripción",
+                description: "Lujoso jacuzzi con sistema de hidromasaje, iluminación LED y vistas panorámicas. Agua termal a 38°C, perfecto para parejas o grupos pequeños."
+            },
+            {
+                name: "Horario de Uso",
+                description: "Lunes a Domingo: 8:00 AM - 10:00 PM | Sesiones privadas: 6:00 PM - 10:00 PM | Duración: 45 minutos"
+            },
+            {
+                name: "Tarifas",
+                description: "Uso estándar: $25/p | Sesión privada: $80 USD | Pack romántico: $120 USD | Terapia acuática: $60 USD"
+            },
+            {
+                name: "Beneficios",
+                description: "Alivio muscular | Mejora circulación | 32 jets | Aromaterapia opcional | Toallas y albornoz incluidos"
+            },
+            {
+                name: "Normas de Seguridad",
+                description: "Máximo 6 personas | No menores de 12 | Ducharse antes | No usar con alcohol | Máximo 20 minutos continuos"
+            },
+            {
+                name: "Experiencias Premium",
+                description: "Noche estrellada | Terapia de contrastes | Masaje en el agua | 15% descuento en paquetes spa"
+            }
+        ]
+    }
+];
+
+const menuGimnasio = [
+    {
+        title: "Gimnasio 'Energía Vital'",
+        icon: "💪",
+        items: [
+            {
+                name: "Descripción",
+                description: "Gimnasio premium con equipos de última generación y espacios para entrenamiento funcional. Vista al mar y ambiente climatizado."
+            },
+            {
+                name: "Horario",
+                description: "Lunes a Viernes: 5:30 AM - 10:00 PM | Sábado y Domingo: 7:00 AM - 9:00 PM | Horario pico: 6-8 AM y 5-7 PM"
+            },
+            {
+                name: "Equipamiento",
+                description: "Cintas TechnoGym | Elípticas | Pesas hasta 50kg | Máquinas de resistencia | Functional Training | Spinning | Área stretching | Box CrossFit"
+            },
+            {
+                name: "Servicios",
+                description: "Toallas y agua incluídas | Vestuarios con duchas | Evaluación física gratis | Tienda de suplementos"
+            },
+            {
+                name: "Clases Grupales",
+                description: "Spinning: Lunes, Miércoles, Viernes 7AM | HIIT: Martes y Jueves 6:30PM | Yoga Fitness: Diario 8AM | Boxeo: Sábados 9AM"
+            },
+            {
+                name: "Normas",
+                description: "Calzado obligatorio | Usar toalla en equipos | No alimentos | Menores de 16 acompañados | Desinfección post-uso"
+            }
+        ]
+    }
+];
+
 </script>
 <style scoped>
 .textos {
