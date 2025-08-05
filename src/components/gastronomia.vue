@@ -1,7 +1,7 @@
 <template>
     <div class="all">
         <div>
-            <img src="/public/img/fondorestaurante.jpg" alt="" style="width: 100%;">
+            <img src="/img/fondorestaurante.jpg" alt="" style="width: 100%;">
             <div class="encima">
                 <h1 id="textollamativo">GASTRONOMIA FRESCA CON SABOR A SAL Y LIBERTAD.</h1>
             </div>
@@ -12,27 +12,27 @@
 
         <div class="infocenter">
             <div class="cardsinfo">
-                <cards img="/public/img/comidasrapidas.jpg" title="COMIDAS RAPIDAS" label="Visitar Sitio"
+                <cards img="/img/comidasrapidas.jpg" title="COMIDAS RAPIDAS" label="Visitar Sitio"
                     @button-click="modalListaRp = true" />
                 <modalList v-model="modalListaRp" :menuSections="menuRapidas" />
 
-                <cards img="/public/img/comidaitaliana.jpg" title="COMIDAS ITALIANA" label="Visitar Sitio"
+                <cards img="/img/comidaitaliana.jpg" title="COMIDAS ITALIANA" label="Visitar Sitio"
                     @button-click="modalListaIt = true" />
                 <modalList v-model="modalListaIt" :menuSections="menuItaliana" />
 
-                <cards img="/public/img/comidaasiatica.jpg" title="COMIDAS ASIATICA" label="Visitar Sitio"
+                <cards img="/img/comidaasiatica.jpg" title="COMIDAS ASIATICA" label="Visitar Sitio"
                     @button-click="modalListaAs = true" />
                 <modalList v-model="modalListaAs" :menuSections="menuAsiatica" />
 
-                <cards img="/public/img/bares.jpg" title="BAR Y BEBIDAS" label="Visitar Sitio"
+                <cards img="/img/bares.jpg" title="BAR Y BEBIDAS" label="Visitar Sitio"
                     @button-click="modalListaBr = true" />
                 <modalList v-model="modalListaBr" :menuSections="menuBares" />
 
-                <cards img="/public/img/comidavegeyvega.jpg" title="COMIDAS VEGETARIANA Y VEGANA" label="Visitar Sitio"
+                <cards img="/img/comidavegeyvega.jpg" title="COMIDAS VEGETARIANA Y VEGANA" label="Visitar Sitio"
                     @button-click="modalListaVv = true" />
                 <modalList v-model="modalListaVv" :menuSections="menuVegetariano" />
 
-                <cards img="/public/img/comidatradicional.jpg" title="COMIDA TRADICIONAL" label="Visitar Sitio"
+                <cards img="/img/comidatradicional.jpg" title="COMIDA TRADICIONAL" label="Visitar Sitio"
                     @button-click="modalListaTr = true" />
                 <modalList v-model="modalListaTr" :menuSections="menuTradicional" />
 
