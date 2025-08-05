@@ -20,13 +20,13 @@
       <div>
         <div class="drawer">
           <div class="bonyur1">
-          <q-btn class="button-33" label="home" to="/" />
+          <button-33 label="home" to="/" />
           </div>
           <div class="bonyur">
-            <q-btn class="button-33" label="habitaciones" to="/habitaciones" />
-            <q-btn class="button-33" label="deportes" to="/deportes" />
-            <q-btn class="button-33" label="gastronomia" to="/gastronomia" />
-            <q-btn class="button-33" label="servicios" to="/servicios" />
+            <button-33 label="habitaciones" to="/habitaciones" />
+            <button-33 label="gastronomia" to="/gastronomia" />
+            <button-33 label="deportes" to="/deportes" />
+            <button-33 label="servicios" to="/servicios" />
           </div>
         </div>
       </div>
@@ -52,11 +52,11 @@
     </q-footer>
 
   </q-layout>
-  <!-- https://colorhunt.co/palette/3674b5578fcaf5f0cdfada7a -->
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import button33 from './components/button33.vue'
 
 const leftDrawerOpen = ref(false)
 
@@ -98,23 +98,5 @@ function toggleLeftDrawer() {
 .tm {
   height: 80px;
   font-family: 'Super Impacto', Impact, sans-serif;
-}
-
-.button-33 {
-  background-color: #3674B5;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  font-family: 'Super Impacto', Impact, sans-serif;
-  font-size: 16px;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.button-33:hover {
-  background-color: #285a8c;
 }
 </style>

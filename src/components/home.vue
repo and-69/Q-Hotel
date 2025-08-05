@@ -5,7 +5,7 @@
             <img src="/public/img/hotelhome.jpg" alt="" style="width: 100%;">
             <div class="encima">
                 <h1 id="textollamativo">LUJO, TRANQUILIDAD Y BRISA MARINA... TODO EN UN MISMO LUGAR.</h1>
-                <q-btn class="button-34" to="/habitaciones">RESERVA AQUI!</q-btn>
+                <button34 label="RESERVA AQUI!" to="/habitaciones"/>
             </div>
 
         </div>
@@ -26,55 +26,39 @@
         
         <div class="infoCenter">
             <div class="cardsinfo">
-                <q-card class="my-card">
-                    <q-img src="/public/img/habt-hotel.jpg">
-                        <div class="absolute-bottom">
-                            <div class="text-h6">Bungalows y Habitaciones</div>
-                        </div>
-                    </q-img>
-
-                    <q-card-actions>
-                        <q-btn class="button-34" flat to="/habitaciones">Visitar Sitio</q-btn>
-                    </q-card-actions>
-                </q-card>
-                <q-card class="my-card">
-                    <q-img src="/public/img/restaurante.jpg">
-                        <div class="absolute-bottom">
-                            <div class="text-h6">Bares y Restaurantes</div>
-                        </div>
-                    </q-img>
-
-                    <q-card-actions>
-                        <q-btn class="button-34" flat to="/gastronomia">Visitar Sitio</q-btn>
-                    </q-card-actions>
-                </q-card>
-                <q-card class="my-card">
-                    <q-img src="/public/img/spa-home.jpg">
-                        <div class="absolute-bottom">
-                            <div class="text-h6">Recreacion y Servicios</div>
-                        </div>
-                    </q-img>
-
-                    <q-card-actions>
-                        <q-btn class="button-34" flat to="/servicios">Visitar Sitio</q-btn>
-                    </q-card-actions>
-                </q-card>
-                <q-card class="my-card">
-                    <q-img src="/public/img/jetsky.jpg">
-                        <div class="absolute-bottom">
-                            <div class="text-h6">Deportes y diversion extrema</div>
-                        </div>
-                    </q-img>
-
-                    <q-card-actions>
-                        <q-btn class="button-34" flat to="/deportes">Visitar Sitio</q-btn>
-                    </q-card-actions>
-                </q-card>
+                <cardHome
+                    img="public/img/habt-hotel.jpg"
+                    title="Bungalows y Habitaciones"
+                    label="Visitar Sitio"
+                    to="/habitaciones"
+                />
+                <cardHome
+                    img="public/img/restaurante.jpg"
+                    title="Bares y Restaurantes"
+                    label="Visitar Sitio"
+                    to="/gastronomia"
+                />
+                <cardHome
+                    img="public/img/spa-home.jpg"
+                    title="Recreacion y Servicios"
+                    label="Visitar Sitio"
+                    to="/servicios"
+                />
+                <cardHome
+                    img="public/img/jetsky.jpg"
+                    title="Deportes y diversion extrema"
+                    label="Visitar Sitio"
+                    to="/deportes"
+                />
             </div>
         </div>
 
     </div>
 </template>
+<script setup>
+import button34 from './button34.vue';
+import cardHome from './cardHome.vue';
+</script>
 <style scoped>
 .textos {
     display: flex;
@@ -165,36 +149,4 @@ body,
     z-index: 2;
 }
 
-.button-34 {
-    background-color: #ffe066 !important;
-    border-radius: 100px;
-    box-shadow:
-        #ffd23f 0 -25px 18px -14px inset,
-        #ffb627 0 1px 2px;
-    color: #450086 !important;
-    cursor: pointer;
-    display: inline-block;
-    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
-    padding: 7px 20px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 250ms;
-    border: 0;
-    font-size: 16px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 50%;
-}
-
-.button-34:hover {
-    box-shadow:
-        #ffd23f 0 -25px 18px -14px inset,
-        #ffb627 0 1px 2px,
-        #ffb627 0 2px 4px;
-    background-color: #a677ff !important;
-    /* Más brillante al pasar el mouse */
-    color: #450086;
-    transform: scale(1.05) rotate(-1deg);
-}
 </style>

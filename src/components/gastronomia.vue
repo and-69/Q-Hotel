@@ -12,456 +12,424 @@
 
         <div class="infocenter">
             <div class="cardsinfo">
-                <q-card class="my-card">
-                    <q-img src="/public/img/comidasrapidas.jpg" class="img-card">
-                        <div class="absolute-bottom">
-                            <div class="text-h6">COMIDAS RAPIDAS</div>
-                        </div>
-                    </q-img>
+                <cards img="/public/img/comidasrapidas.jpg" title="COMIDAS RAPIDAS" label="Visitar Sitio"
+                    @button-click="modalListaRp = true" />
+                <modalList v-model="modalListaRp" :menuSections="menuRapidas" />
 
-                    <q-card-actions>
-                        <q-btn class="button-34" flat @click="modal1 = true">Visitar Sitio</q-btn>
-                    </q-card-actions>
-                </q-card>
-                <q-card class="my-card">
-                    <q-img src="/public/img/comidaitaliana.jpg" class="img-card">
-                        <div class="absolute-bottom">
-                            <div class="text-h6">COMIDA ITALIANA</div>
-                        </div>
-                    </q-img>
+                <cards img="/public/img/comidaitaliana.jpg" title="COMIDAS ITALIANA" label="Visitar Sitio"
+                    @button-click="modalListaIt = true" />
+                <modalList v-model="modalListaIt" :menuSections="menuItaliana" />
 
-                    <q-card-actions>
-                        <q-btn class="button-34" flat @click="modal2 = true">Visitar Sitio</q-btn>
-                    </q-card-actions>
-                </q-card>
-                <q-card class="my-card">
-                    <q-img src="/public/img/comidaasiatica.jpg" class="img-card">
-                        <div class="absolute-bottom">
-                            <div class="text-h6">COMIDA ASIATICA</div>
-                        </div>
-                    </q-img>
+                <cards img="/public/img/comidaasiatica.jpg" title="COMIDAS ASIATICA" label="Visitar Sitio"
+                    @button-click="modalListaAs = true" />
+                <modalList v-model="modalListaAs" :menuSections="menuAsiatica" />
 
-                    <q-card-actions>
-                        <q-btn class="button-34" flat @click="modal3 = true">Visitar Sitio</q-btn>
-                    </q-card-actions>
-                </q-card>
-                <q-card class="my-card">
-                    <q-img src="/public/img/bares.jpg" class="img-card">
-                        <div class="absolute-bottom">
-                            <div class="text-h6">BARES Y BEBIDAS</div>
-                        </div>
-                    </q-img>
+                <cards img="/public/img/bares.jpg" title="BAR Y BEBIDAS" label="Visitar Sitio"
+                    @button-click="modalListaBr = true" />
+                <modalList v-model="modalListaBr" :menuSections="menuBares" />
 
-                    <q-card-actions>
-                        <q-btn class="button-34" flat @click="modal4 = true">Visitar Sitio</q-btn>
-                    </q-card-actions>
-                </q-card>
-                <q-card class="my-card">
-                    <q-img src="/public/img/comidavegeyvega.jpg" class="img-card">
-                        <div class="absolute-bottom">
-                            <div class="text-h6">COMIDA VEGETARIANA Y VEGANA</div>
-                        </div>
-                    </q-img>
+                <cards img="/public/img/comidavegeyvega.jpg" title="COMIDAS VEGETARIANA Y VEGANA" label="Visitar Sitio"
+                    @button-click="modalListaVv = true" />
+                <modalList v-model="modalListaVv" :menuSections="menuVegetariano" />
 
-                    <q-card-actions>
-                        <q-btn class="button-34" flat @click="modal5 = true">Visitar Sitio</q-btn>
-                    </q-card-actions>
-                </q-card><q-card class="my-card">
-                    <q-img src="/public/img/comidatradicional.jpg" class="img-card">
-                        <div class="absolute-bottom">
-                            <div class="text-h6">COMIDA TRADICIONAL</div>
-                        </div>
-                    </q-img>
+                <cards img="/public/img/comidatradicional.jpg" title="COMIDA TRADICIONAL" label="Visitar Sitio"
+                    @button-click="modalListaTr = true" />
+                <modalList v-model="modalListaTr" :menuSections="menuTradicional" />
 
-                    <q-card-actions>
-                        <q-btn class="button-34" flat @click="modal6 = true">Visitar Sitio</q-btn>
-                    </q-card-actions>
-                </q-card>
             </div>
         </div>
 
-        <div>
-            <q-dialog v-model="modal1">
-                <q-card style="width: 700px; max-width: 80vw;">
-                    <q-card-section>
-                        <div class="text-h6">MENU COMIDAS RAPIDAS</div>
-                    </q-card-section>
 
-                    <q-card-section class="q-pt-none">
-                        <div style="font-family: Arial, sans-serif; max-width: 100%;">
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🥪 Bocados & Snacks</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Ceviche express</strong> - Trozos de pescado fresco marinado en limón,
-                                        con ají, cebolla y tostadas</li>
-                                    <li><strong>Tacos de camarón</strong> - Tortillas suaves con camarones salteados,
-                                        pico de gallo y guacamole</li>
-                                    <li><strong>Ensalada César con pollo grillé</strong> - Crujiente lechuga romana,
-                                        croutons, parmesano y aderezo cremoso</li>
-                                    <li><strong>Pinchos de fruta tropical</strong> - Piña, mango, sandía y kiwi
-                                        (opcional con chilito y limón)</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🍔 Hamburguesas & Sándwiches</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Burger "Paraíso"</strong> - Carne 100% res, queso cheddar, aguacate y
-                                        salsa chipotle</li>
-                                    <li><strong>Sándwich club</strong> - Pan tostado con pollo, tocino, lechuga, tomate
-                                        y mayonesa</li>
-                                    <li><strong>Wrap vegano</strong> - Hummus, espinaca, aguacate, zanahoria y
-                                        germinados</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🌮 Especialidades Playeras</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Fish & Chips</strong> - Filete de pescado empanizado con papas fritas
-                                        crujientes</li>
-                                    <li><strong>Tostadas de aguachile</strong> - Camarones en salsa picante de pepino y
-                                        limón</li>
-                                    <li><strong>Quesadillas de mariscos</strong> - Tortilla de harina rellena de queso y
-                                        mix de mariscos</li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <h3 style="color: #e67e22; margin: 5px 0;">🥤 Bebidas Refrescantes</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Limonada de coco</strong> - Fresca y cremosa</li>
-                                    <li><strong>Jugo verde detox</strong> - Pepino, piña, espinaca y jengibre</li>
-                                    <li><strong>Michelada clásica</strong> - Cerveza, limón, salsa inglesa y chile en
-                                        polvo</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </q-card-section>
-
-                    <q-card-actions align="right" class="bg-white text-teal">
-                        <q-btn flat label="OK" v-close-popup />
-                    </q-card-actions>
-                </q-card>
-            </q-dialog>
-
-            <q-dialog v-model="modal2">
-                <q-card style="width: 700px; max-width: 80vw;">
-                    <q-card-section>
-                        <div class="text-h6">MENU COMIDA ITALIANA</div>
-                    </q-card-section>
-
-                    <q-card-section class="q-pt-none">
-                        <div style="font-family: Arial, sans-serif; max-width: 100%;">
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🍝 Antipasti & Primi</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Bruschetta al Pomodoro</strong> - Pan tostado con tomate fresco,
-                                        albahaca y ajo</li>
-                                    <li><strong>Carpaccio di Manzo</strong> - Finas láminas de res con rúcula,
-                                        parmesano y aderezo de limón</li>
-                                    <li><strong>Spaghetti Aglio e Olio</strong> - Espaguetis con ajo, aceite de oliva
-                                        y guindilla</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🍕 Pizze</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Margherita</strong> - Salsa de tomate, mozzarella fresca y albahaca</li>
-                                    <li><strong>Diavola</strong> - Salsa de tomate, mozzarella, salami picante y
-                                        orégano</li>
-                                    <li><strong>Caprichosa</strong> - Salsa de tomate, mozzarella, jamón, champiñones
-                                        y alcachofas</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🍷 Vini</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Chianti</strong> - Vino tinto de la Toscana, seco y afrutado</li>
-                                    <li><strong>Prosecco</strong> - Vino espumoso italiano, fresco y floral</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </q-card-section>
-
-                    <q-card-actions align="right" class="bg-white text-teal">
-                        <q-btn flat label="OK" v-close-popup />
-                    </q-card-actions>
-                </q-card>
-            </q-dialog>
-
-            <q-dialog v-model="modal3">
-                <q-card style="width: 700px; max-width: 80vw;">
-                    <q-card-section>
-                        <div class="text-h6">MENU COMIDA ASIATICA</div>
-                    </q-card-section>
-
-                    <q-card-section class="q-pt-none">
-                        <div style="font-family: Arial, sans-serif; max-width: 100%;">
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🍣 Sushi & Sashimi</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Sushi variado</strong> - Selección de nigiri, maki y sashimi</li>
-                                    <li><strong>Rollos especiales</strong> - Con ingredientes frescos y salsas
-                                        exóticas</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🍜 Platos Calientes</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Ramen</strong> - Fideos en caldo con carne, huevo y verduras</li>
-                                    <li><strong>Pad Thai</strong> - Fideos de arroz salteados con camarones,
-                                        pollo y cacahuate</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🥢 Acompañamientos</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Edamame</strong> - Habas de soja al vapor con sal</li>
-                                    <li><strong>Rollitos primavera</strong> - Con salsa agridulce</li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <h3 style="color: #e67e22; margin: 5px 0;">🥤 Bebidas Asiáticas</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Té verde</strong> - Refrescante y antioxidante</li>
-                                    <li><strong>Ramune</strong> - Refresco japonés con sabor a frutas</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </q-card-section>
-
-                    <q-card-actions align="right" class="bg-white text-teal">
-                        <q-btn flat label="OK" v-close-popup />
-                    </q-card-actions>
-                </q-card>
-            </q-dialog>
-
-            <q-dialog v-model="modal4">
-                <q-card style="width: 700px; max-width: 80vw;">
-                    <q-card-section>
-                        <div class="text-h6">MENU BARES</div>
-                    </q-card-section>
-
-                    <q-card-section class="q-pt-none">
-                        <div style="font-family: Arial, sans-serif; max-width: 100%;">
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🍹 Cocteles</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Mojito</strong> - Ron, menta, azúcar, limón y soda</li>
-                                    <li><strong>Piña Colada</strong> - Ron, crema de coco y piña</li>
-                                    <li><strong>Caipirinha</strong> - Cachaça, azúcar y lima</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🍺 Cervezas</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Rubia</strong> - Ligera y refrescante</li>
-                                    <li><strong>Roja</strong> - Con cuerpo y sabor intenso</li>
-                                    <li><strong>Negra</strong> - Suave y cremosa</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 15px;">
-                                <h3 style="color: #e67e22; margin: 5px 0;">🥃 Licores</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0;">
-                                    <li><strong>Whisky</strong> - Escocés, suave y ahumado</li>
-                                    <li><strong>Vodka</strong> - Neutro y puro</li>
-                                    <li><strong>Ron</strong> - Dulce y aromático</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </q-card-section>
-
-                    <q-card-actions align="right" class="bg-white text-teal">
-                        <q-btn flat label="OK" v-close-popup />
-                    </q-card-actions>
-                </q-card>
-            </q-dialog>
-
-            <q-dialog v-model="modal5">
-                <q-card style="width: 700px; max-width: 80vw;">
-                    <q-card-section>
-                        <div class="text-h6">MENU COMIDA VEGETARIANA & VEGANA</div>
-                    </q-card-section>
-
-                    <q-card-section class="q-pt-none">
-                        <div style="font-family: 'Arial', sans-serif; max-width: 100%; color: #333;">
-                            <div style="margin-bottom: 20px; border-bottom: 1px dashed #4CAF50; padding-bottom: 10px;">
-                                <h3 style="color: #4CAF50; margin: 5px 0;">🥗 ENTRADAS VEGGIE</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0; list-style-type: none;">
-                                    <li><strong>Ceviche de champiñones</strong> - <span
-                                            style="color: #8BC34A;">[Vegano]</span><br>Hongos marinados en limón,
-                                        cilantro, cebolla morada y camote</li>
-                                    <li><strong>Bruschettas mediterráneas</strong> - <span
-                                            style="color: #FFC107;">[Vegetariano]</span><br>Pan tostado con tomate,
-                                        albahaca y queso de cabra</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 20px; border-bottom: 1px dashed #4CAF50; padding-bottom: 10px;">
-                                <h3 style="color: #4CAF50; margin: 5px 0;">🌯 PLATOS PRINCIPALES</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0; list-style-type: none;">
-                                    <li><strong>Buddha Bowl player</strong> - <span
-                                            style="color: #8BC34A;">[Vegano]</span><br>Quinoa, aguacate, garbanzos,
-                                        espinaca y tahini</li>
-                                    <li><strong>Tacos de jackfruit</strong> - <span
-                                            style="color: #8BC34A;">[Vegano]</span><br>"Carne" de jaca desmenuzada con
-                                        piña y salsa BBQ</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 20px; border-bottom: 1px dashed #4CAF50; padding-bottom: 10px;">
-                                <h3 style="color: #4CAF50; margin: 5px 0;">🍔 HAMBURGUESAS</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0; list-style-type: none;">
-                                    <li><strong>Burger de lentejas</strong> - <span
-                                            style="color: #8BC34A;">[Vegano]</span><br>Hamburguesa casera con quinoa y
-                                        hongos</li>
-                                    <li><strong>Sándwich caprese</strong> - <span
-                                            style="color: #FFC107;">[Vegetariano]</span><br>Pan ciabatta con tomate,
-                                        mozzarella y pesto</li>
-                                </ul>
-                            </div>
-
-                            <div style="margin-bottom: 20px; border-bottom: 1px dashed #4CAF50; padding-bottom: 10px;">
-                                <h3 style="color: #4CAF50; margin: 5px 0;">🥤 BEBIDAS</h3>
-                                <ul style="padding-left: 20px; margin: 5px 0; list-style-type: none;">
-                                    <li><strong>Smoothie verde</strong> - <span
-                                            style="color: #8BC34A;">[Vegano]</span><br>Espinaca, piña, plátano y leche
-                                        de almendras</li>
-                                    <li><strong>Limonada de lavanda</strong> - <span
-                                            style="color: #8BC34A;">[Vegano]</span></li>
-                                </ul>
-                            </div>
-
-                        </div>
-
-                    </q-card-section>
-
-                    <q-card-actions align="right" class="bg-white text-teal">
-                        <q-btn flat label="OK" v-close-popup />
-                    </q-card-actions>
-                </q-card>
-            </q-dialog>
-
-            <q-dialog v-model="modal6">
-                <q-card style="width: 700px; max-width: 80vw;">
-                    <q-card-section>
-                        <div class="text-h6">MENU COMIDA TRADICIONAL</div>
-                    </q-card-section>
-
-                    <q-card-section class="q-pt-none">
-                        <div style="font-family: 'Arial', sans-serif; max-width: 100%; color: #333; line-height: 1.5; max-height: 60vh; overflow-y: auto;">
-
-                            <h4
-                                style="color: #F44336; border-bottom: 2px solid #F44336; padding-bottom: 5px; margin-top: 20px;">
-                                🍛 Platos Fuertes</h4>
-                            <ul style="padding-left: 20px; list-style-type: none; margin-top: 10px;">
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Bandeja Paisa</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Frijoles, arroz, chicharrón, carne molida, chorizo, huevo, aguacate y arepa
-                                    </div>
-                                </li>
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Ajiaco Santafereño</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Sopa de pollo con tres papas, guascas, crema de leche y alcaparras
-                                    </div>
-                                </li>
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Sancocho Trifásico</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Carne de res, cerdo y pollo con yuca, plátano y ñame
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <h4
-                                style="color: #4CAF50; border-bottom: 2px solid #4CAF50; padding-bottom: 5px; margin-top: 20px;">
-                                🌽 Acompañamientos</h4>
-                            <ul style="padding-left: 20px; list-style-type: none; margin-top: 10px;">
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Arepas</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Blancas, de queso o de choclo (maíz tierno)
-                                    </div>
-                                </li>
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Patacones</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Plátano verde aplastado y frito dos veces
-                                    </div>
-                                </li>
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Arroz con Coco</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Típico de la costa Caribe
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <h4
-                                style="color: #9C27B0; border-bottom: 2px solid #9C27B0; padding-bottom: 5px; margin-top: 20px;">
-                                🍮 Postres</h4>
-                            <ul style="padding-left: 20px; list-style-type: none; margin-top: 10px;">
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Postre de Natas</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Dulce tradicional antioqueño
-                                    </div>
-                                </li>
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Mogolla Bogotana</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Pan dulce esponjoso
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <h4
-                                style="color: #2196F3; border-bottom: 2px solid #2196F3; padding-bottom: 5px; margin-top: 20px;">
-                                🥤 Bebidas Típicas</h4>
-                            <ul style="padding-left: 20px; list-style-type: none; margin-top: 10px;">
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Aguapanela con queso</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Bebida caliente de panela con trozos de queso campesino
-                                    </div>
-                                </li>
-                                <li style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee;">
-                                    <strong>Lulada</strong>
-                                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                        Refresco de lulo con trozos de fruta (Valle del Cauca)
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </q-card-section>
-
-                    <q-card-actions align="right" class="bg-white text-teal">
-                        <q-btn flat label="OK" v-close-popup />
-                    </q-card-actions>
-                </q-card>
-            </q-dialog>
-        </div>
     </div>
 </template>
 <script setup>
 import { ref } from 'vue'
+import cards from './cards.vue'
+import modalList from './modalList.vue'
 
-const modal1 = ref(false)
-const modal2 = ref(false)
-const modal3 = ref(false)
-const modal4 = ref(false)
-const modal5 = ref(false)
-const modal6 = ref(false)
+const modalListaRp = ref(false)
+const modalListaIt = ref(false)
+const modalListaAs = ref(false)
+const modalListaBr = ref(false)
+const modalListaVv = ref(false)
+const modalListaTr = ref(false)
+
+const menuRapidas = [
+    {
+        title: "Bocados & Snacks",
+        icon: "🥪",
+        items: [
+            {
+                name: "Ceviche express",
+                description: "Trozos de pescado fresco marinado en limón, con ají, cebolla y tostadas"
+            },
+            {
+                name: "Tacos de camarón",
+                description: "Tortillas suaves con camarones salteados, pico de gallo y guacamole"
+            },
+            {
+                name: "Ensalada César con pollo grillé",
+                description: "Crujiente lechuga romana, croutons, parmesano y aderezo cremoso"
+            },
+            {
+                name: "Pinchos de fruta tropical",
+                description: "Piña, mango, sandía y kiwi (opcional con chilito y limón)"
+            }
+        ]
+    },
+    {
+        title: "Hamburguesas & Sándwiches",
+        icon: "🍔",
+        items: [
+            {
+                name: "Burger \"Paraíso\"",
+                description: "Carne 100% res, queso cheddar, aguacate y salsa chipotle"
+            },
+            {
+                name: "Sándwich club",
+                description: "Pan tostado con pollo, tocino, lechuga, tomate y mayonesa"
+            },
+            {
+                name: "Wrap vegano",
+                description: "Hummus, espinaca, aguacate, zanahoria y germinados"
+            }
+        ]
+    },
+    {
+        title: "Especialidades Playeras",
+        icon: "🌮",
+        items: [
+            {
+                name: "Fish & Chips",
+                description: "Filete de pescado empanizado con papas fritas crujientes"
+            },
+            {
+                name: "Tostadas de aguachile",
+                description: "Camarones en salsa picante de pepino y limón"
+            },
+            {
+                name: "Quesadillas de mariscos",
+                description: "Tortilla de harina rellena de queso y mix de mariscos"
+            }
+        ]
+    },
+    {
+        title: "Bebidas Refrescantes",
+        icon: "🥤",
+        items: [
+            {
+                name: "Limonada de coco",
+                description: "Fresca y cremosa"
+            },
+            {
+                name: "Jugo verde detox",
+                description: "Pepino, piña, espinaca y jengibre"
+            },
+            {
+                name: "Michelada clásica",
+                description: "Cerveza, limón, salsa inglesa y chile en polvo"
+            }
+        ]
+    }
+]
+const menuItaliana = [
+    {
+        title: "Antipasti & Primi",
+        icon: "🍝",
+        items: [
+            {
+                name: "Bruschetta al Pomodoro",
+                description: "Pan tostado con tomate fresco, albahaca y ajo"
+            },
+            {
+                name: "Carpaccio di Manzo",
+                description: "Finas láminas de res con rúcula, parmesano y aderezo de limón"
+            },
+            {
+                name: "Spaghetti Aglio e Olio",
+                description: "Espaguetis con ajo, aceite de oliva y guindilla"
+            }
+        ]
+    },
+    {
+        title: "Pizze",
+        icon: "🍕",
+        items: [
+            {
+                name: "Margherita",
+                description: "Salsa de tomate, mozzarella fresca y albahaca"
+            },
+            {
+                name: "Diavola",
+                description: "Salsa de tomate, mozzarella, salami picante y orégano"
+            },
+            {
+                name: "Caprichosa",
+                description: "Salsa de tomate, mozzarella, jamón, champiñones y alcachofas"
+            }
+        ]
+    },
+    {
+        title: "Vini",
+        icon: "🍷",
+        items: [
+            {
+                name: "Chianti",
+                description: "Vino tinto de la Toscana, seco y afrutado"
+            },
+            {
+                name: "Prosecco",
+                description: "Vino espumoso italiano, fresco y floral"
+            }
+        ]
+    }
+]
+const menuAsiatica = [
+    {
+        title: "Sushi & Sashimi",
+        icon: "🍣",
+        items: [
+            {
+                name: "Sushi variado",
+                description: "Selección de nigiri, maki y sashimi"
+            },
+            {
+                name: "Rollos especiales",
+                description: "Con ingredientes frescos y salsas exóticas"
+            }
+        ]
+    },
+    {
+        title: "Platos Calientes",
+        icon: "🍜",
+        items: [
+            {
+                name: "Ramen",
+                description: "Fideos en caldo con carne, huevo y verduras"
+            },
+            {
+                name: "Pad Thai",
+                description: "Fideos de arroz salteados con camarones, pollo y cacahuate"
+            }
+        ]
+    },
+    {
+        title: "Acompañamientos",
+        icon: "🥢",
+        items: [
+            {
+                name: "Edamame",
+                description: "Habas de soja al vapor con sal"
+            },
+            {
+                name: "Rollitos primavera",
+                description: "Con salsa agridulce"
+            }
+        ]
+    },
+    {
+        title: "Bebidas Asiáticas",
+        icon: "🥤",
+        items: [
+            {
+                name: "Té verde",
+                description: "Refrescante y antioxidante"
+            },
+            {
+                name: "Ramune",
+                description: "Refresco japonés con sabor a frutas"
+            }
+        ]
+    }
+]
+const menuBares = [
+    {
+        title: "Cocteles",
+        icon: "🍹",
+        items: [
+            {
+                name: "Mojito",
+                description: "Ron, menta, azúcar, limón y soda"
+            },
+            {
+                name: "Piña Colada",
+                description: "Ron, crema de coco y piña"
+            },
+            {
+                name: "Caipirinha",
+                description: "Cachaça, azúcar y lima"
+            }
+        ]
+    },
+    {
+        title: "Cervezas",
+        icon: "🍺",
+        items: [
+            {
+                name: "Rubia",
+                description: "Ligera y refrescante"
+            },
+            {
+                name: "Roja",
+                description: "Con cuerpo y sabor intenso"
+            },
+            {
+                name: "Negra",
+                description: "Suave y cremosa"
+            }
+        ]
+    },
+    {
+        title: "Licores",
+        icon: "🥃",
+        items: [
+            {
+                name: "Whisky",
+                description: "Escocés, suave y ahumado"
+            },
+            {
+                name: "Vodka",
+                description: "Neutro y puro"
+            },
+            {
+                name: "Ron",
+                description: "Dulce y aromático"
+            }
+        ]
+    }
+]
+const menuVegetariano = [
+    {
+        title: "Entradas Veggie",
+        icon: "🥗",
+        items: [
+            {
+                name: "Ceviche de champiñones",
+                description: "Hongos marinados en limón, cilantro, cebolla morada y camote",
+                tags: ["Vegano"]
+            },
+            {
+                name: "Bruschettas mediterráneas",
+                description: "Pan tostado con tomate, albahaca y queso de cabra",
+                tags: ["Vegetariano"]
+            }
+        ]
+    },
+    {
+        title: "Platos Principales",
+        icon: "🌯",
+        items: [
+            {
+                name: "Buddha Bowl player",
+                description: "Quinoa, aguacate, garbanzos, espinaca y tahini",
+                tags: ["Vegano"]
+            },
+            {
+                name: "Tacos de jackfruit",
+                description: "\"Carne\" de jaca desmenuzada con piña y salsa BBQ",
+                tags: ["Vegano"]
+            }
+        ]
+    },
+    {
+        title: "Hamburguesas",
+        icon: "🍔",
+        items: [
+            {
+                name: "Burger de lentejas",
+                description: "Hamburguesa casera con quinoa y hongos",
+                tags: ["Vegano"]
+            },
+            {
+                name: "Sándwich caprese",
+                description: "Pan ciabatta con tomate, mozzarella y pesto",
+                tags: ["Vegetariano"]
+            }
+        ]
+    },
+    {
+        title: "Bebidas",
+        icon: "🥤",
+        items: [
+            {
+                name: "Smoothie verde",
+                description: "Espinaca, piña, plátano y leche de almendras",
+                tags: ["Vegano"]
+            },
+            {
+                name: "Limonada de lavanda",
+                description: "",
+                tags: ["Vegano"]
+            }
+        ]
+    }
+]
+const menuTradicional = [
+    {
+        title: "Platos Fuertes",
+        icon: "🍛",
+        items: [
+            {
+                name: "Bandeja Paisa",
+                description: "Frijoles, arroz, chicharrón, carne molida, chorizo, huevo, aguacate y arepa"
+            },
+            {
+                name: "Ajiaco Santafereño",
+                description: "Sopa de pollo con tres papas, guascas, crema de leche y alcaparras"
+            },
+            {
+                name: "Sancocho Trifásico",
+                description: "Carne de res, cerdo y pollo con yuca, plátano y ñame"
+            }
+        ]
+    },
+    {
+        title: "Acompañamientos",
+        icon: "🌽",
+        items: [
+            {
+                name: "Arepas",
+                description: "Blancas, de queso o de choclo (maíz tierno)"
+            },
+            {
+                name: "Patacones",
+                description: "Plátano verde aplastado y frito dos veces"
+            },
+            {
+                name: "Arroz con Coco",
+                description: "Típico de la costa Caribe"
+            }
+        ]
+    },
+    {
+        title: "Postres",
+        icon: "🍮",
+        items: [
+            {
+                name: "Postre de Natas",
+                description: "Dulce tradicional antioqueño"
+            },
+            {
+                name: "Mogolla Bogotana",
+                description: "Pan dulce esponjoso"
+            }
+        ]
+    },
+    {
+        title: "Bebidas Típicas",
+        icon: "🥤",
+        items: [
+            {
+                name: "Aguapanela con queso",
+                description: "Bebida caliente de panela con trozos de queso campesino"
+            },
+            {
+                name: "Lulada",
+                description: "Refresco de lulo con trozos de fruta (Valle del Cauca)"
+            }
+        ]
+    }
+]
 </script>
 <style scoped>
 .textos {
@@ -483,30 +451,11 @@ const modal6 = ref(false)
     margin-top: 30px;
 }
 
-.q-dialog {
-    padding: 20px;
-    font-family: 'Super Impacto', Impact, sans-serif;
-}
-
 .all {
     background-color: #F5F0CD;
     font-family: 'Super Impacto', Impact, sans-serif;
 }
 
-.q-card {
-    padding: 20px;
-    font-family: 'Super Impacto', Impact, sans-serif;
-}
-
-h3 {
-    font-family: 'Super Impacto', Impact, sans-serif;
-    font-size: 40px
-}
-
-li {
-    font-family: 'Super Impacto', Impact, sans-serif;
-    font-size: 20px
-}
 
 .infocenter {
     display: flex;
@@ -525,16 +474,6 @@ li {
     margin-bottom: 5%;
 }
 
-.img-card {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.q-card__actions {
-    background-color: #000;
-}
-
 .encima {
     width: 650px;
     position: absolute;
@@ -543,39 +482,6 @@ li {
     transform: translate(-50%, -50%);
     color: #5e00b6;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
-}
-
-.button-34 {
-    background-color: #ffe066 !important;
-    border-radius: 100px;
-    box-shadow:
-        #ffd23f 0 -25px 18px -14px inset,
-        #ffb627 0 1px 2px;
-    color: #450086 !important;
-    cursor: pointer;
-    display: inline-block;
-    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
-    padding: 7px 20px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 250ms;
-    border: 0;
-    font-size: 16px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 50%;
-}
-
-.button-34:hover {
-    box-shadow:
-        #ffd23f 0 -25px 18px -14px inset,
-        #ffb627 0 1px 2px,
-        #ffb627 0 2px 4px;
-    background-color: #a677ff !important;
-    /* Más brillante al pasar el mouse */
-    color: #450086;
-    transform: scale(1.05) rotate(-1deg);
 }
 
 #textollamativo:hover {
